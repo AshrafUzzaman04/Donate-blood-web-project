@@ -22,10 +22,14 @@ div.mainDiv {
 .sing_in {
   background: #6fb554;
   text-align: center;
-  color: white;
+  color: #fff;
   padding: 18px;
   border-radius: 15px 15px 0px 0px;
   text-shadow: 1px 2px 3px #1e1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .sign_up {
   background: #6fb554;
@@ -34,6 +38,10 @@ div.mainDiv {
   padding: 18px;
   border-radius: 15px 15px 0px 0px;
   text-shadow: 1px 2px 3px #1e1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .middelDiv {
   padding: 30px;
