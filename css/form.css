@@ -1,0 +1,129 @@
+body {
+  /* background: #e3e3e3; */
+  font-family: arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+div.mainDiv {
+  width: 300px;
+  margin: 0 auto;
+  background: red;
+}
+.maivDiv {
+  background: white;
+  width: 330px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0px 2px 12px -4px black;
+}
+.sing_in {
+  background: #6fb554;
+  text-align: center;
+  color: white;
+  padding: 18px;
+  border-radius: 15px 15px 0px 0px;
+  text-shadow: 1px 2px 3px #1e1d1d;
+}
+.sign_up {
+  background: #6fb554;
+  text-align: center;
+  color: white;
+  padding: 18px;
+  border-radius: 15px 15px 0px 0px;
+  text-shadow: 1px 2px 3px #1e1d1d;
+}
+.middelDiv {
+  padding: 30px;
+}
+.middelDiv .form-border {
+  position: relative;
+  margin: 8px 0;
+}
+.middelDiv .form-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: 0.25s ease-in;
+  border-bottom: 2px solid #939393;
+  border-radius: 40px;
+}
+.middelDiv .form-border:focus-within::after {
+  transform: scaleX(0.9);
+  border-bottom: 2px solid #939393;
+}
+.middelDiv div input {
+  padding: 10px;
+  width: 100%;
+  background: #ebebeb;
+  border-radius: 71px;
+  border: none;
+}
+
+.middelDiv div input:focus {
+  outline: none;
+}
+input {
+  border-radius: 71px;
+  border: none;
+  margin: 8px;
+  width: 100%;
+}
+div.forget {
+  float: right;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+span {
+  color: #a1a1a1;
+}
+a {
+  color: rgb(0, 197, 10) !important;
+}
+input.submit {
+  color: white;
+  background: linear-gradient(#8bc34a, #6fb554);
+  width: 100%;
+  margin-top: 18px;
+  padding: 8px;
+  border-radius: 134px;
+  font-weight: 500;
+  cursor: wait;
+  transition: all 0.5s;
+}
+input.submit:hover {
+  background: linear-gradient(#6fb554, #1fbf15);
+}
+div.footer {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 12px;
+}
+div.question_span {
+  padding: 5px;
+  font-size: 12px;
+}
+div.sing_updiv {
+  padding: 4px;
+  padding-bottom: 28px;
+}
+div.sing_updiv a {
+  color: rgb(0, 197, 10) !important;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 13px;
+  transition: all 0.5s;
+}
+
+input {
+  padding-left: 27px !important;
+}
+input.submit.hellowSub {
+  margin-top: 30px;
+}
