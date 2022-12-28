@@ -23,215 +23,287 @@
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <!-- icon image -->
-        <div class="icon-img">
-          <a href="./" style="text-decoration: none"
-            ><img
-              src="./images/health medical center Logo (3).png"
-              alt=""
-              class="img-fluid"
-              width="44"
-            />
-            <span
-              class="text-danger fw-bold"
-              style="
-                font-size: 30px;
-                text-align: center;
-                vertical-align: middle;
-              "
-            >
-              রক্ত দান</span
-            ></a
-          >
-        </div>
-
-        <div class="manubar">
-          <!-- sign in button -->
-          <div class="signIn-btn">
-            <a href="/signIn.html"
-              ><ion-icon
-                name="log-in-outline"
-                style="font-size: 24px; font-weight: 800"
-              ></ion-icon>
-
-              সাইন ইন</a
+    <div class="background">
+      <!-- header div started here -->
+      <header>
+        <div class="container">
+          <!-- icon image -->
+          <div class="icon-img">
+            <a href="./" style="text-decoration: none"
+              ><img
+                src="./images/health medical center Logo (3).png"
+                alt=""
+                class="img-fluid"
+                width="44"
+              />
+              <span
+                class="fw-bold"
+                style="
+                  font-size: 30px;
+                  text-align: center;
+                  vertical-align: middle;
+                  color: white;
+                "
+              >
+                রক্ত দান</span
+              ></a
             >
           </div>
 
-          <!-- manubar icon -->
-          <div
-            class="mobile-navbar d-flex justify-content-center align-items-center text-dark"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasLeft"
-            aria-controls="offcanvasLeft"
-          >
-            <ion-icon name="menu-outline" style="font-size: 36px"></ion-icon>
-          </div>
+          <div class="manubar">
+            <!-- sign in button -->
+            <div class="signIn-btn">
+              <a href="/signIn.html"
+                ><ion-icon
+                  name="log-in-outline"
+                  style="font-size: 24px; font-weight: 800"
+                ></ion-icon>
 
-          <!-- left side scroll manubar -->
-          <div class="side-bar border-0">
+                সাইন ইন</a
+              >
+            </div>
+
+            <!-- manubar icon -->
             <div
-              class="offcanvas offcanvas-start border-0"
-              data-bs-scroll="true"
-              tabindex="-1"
-              id="offcanvasLeft"
-              aria-labelledby="offcanvasLeftLabel"
+              class="mobile-navbar d-flex justify-content-center align-items-center text-white"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
             >
-              <div class="offcanvas-header">
-                <div class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                  <!-- icon image -->
-                  <div class="icon-img">
-                    <a href="./" style="text-decoration: none"
-                      ><img
-                        src="./images/health medical center Logo (3).png"
-                        alt=""
-                        class="img-fluid"
-                        width="44"
-                      />
-                      <span
-                        class="text-danger fw-bold"
-                        style="
-                          font-size: 30px;
-                          text-align: center;
-                          vertical-align: middle;
-                        "
-                      >
-                        রক্ত দান</span
-                      ></a
-                    >
-                  </div>
-                </div>
+              <ion-icon name="menu-outline" style="font-size: 36px"></ion-icon>
+            </div>
 
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <!-- profile section -->
-                <div class="profile-section">
-                  <div class="img-div">
-                    <img src="./images/myPic (6).jpeg" alt="" />
+            <!-- left side scroll manubar -->
+            <div class="side-bar border-0">
+              <div
+                class="offcanvas offcanvas-start border-0"
+                data-bs-scroll="true"
+                tabindex="-1"
+                id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel"
+              >
+                <div class="offcanvas-header">
+                  <div
+                    class="offcanvas-title"
+                    id="offcanvasWithBothOptionsLabel"
+                  >
+                    <!-- icon image -->
+                    <div class="icon-img">
+                      <a href="./" style="text-decoration: none"
+                        ><img
+                          src="./images/health medical center Logo (3).png"
+                          alt=""
+                          class="img-fluid"
+                          width="44"
+                        />
+                        <span
+                          class="text-danger fw-bold"
+                          style="
+                            font-size: 30px;
+                            text-align: center;
+                            vertical-align: middle;
+                          "
+                        >
+                          রক্ত দান</span
+                        ></a
+                      >
+                    </div>
                   </div>
-                  <div class="top-information">
-                    <span>আশরাফ উজ্জামান</span>
-                    <span>ashraf.uzzaman04082004@gmail.com</span>
-                  </div>
-                </div>
 
-                <!-- list slider manu -->
-                <nav>
-                  <ul>
-                    <li>
-                      <a href="javascript:void(0)"
-                        ><ion-icon name="call-outline"></ion-icon>
-                        +৮৮০১৭৪৯৯৩১৮৯১</a
-                      >
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)"
-                        ><ion-icon
-                          name="water-outline"
-                          style="color: red"
-                        ></ion-icon>
-                        রক্তের গ্রুপঃ O(+ve)</a
-                      >
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)"
-                        ><ion-icon name="calendar-number-outline"></ion-icon>
-                        সর্বশেষ রক্ত দান</a
-                      >
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)"
-                        ><ion-icon name="fitness-outline"></ion-icon> মোট রক্ত
-                        দান করেছেনঃ ১বার</a
-                      >
-                    </li>
-                    <li>
-                      <a href=""
-                        ><ion-icon name="pencil-outline"></ion-icon> রক্তদানের
-                        তারিখ আপডেট করুন</a
-                      >
-                    </li>
-                    <li>
-                      <a href=""
-                        ><ion-icon name="cloud-upload-outline"></ion-icon>
-                        প্রফাইল আপডেট করুন</a
-                      >
-                    </li>
-                    <li>
-                      <a href=""
-                        ><ion-icon name="log-out-outline"></ion-icon> লগ আউট</a
-                      >
-                    </li>
-                    <li>
-                      <a href=""
-                        ><ion-icon name="share-social-outline"></ion-icon> শেয়ার
-                        করুন</a
-                      >
-                    </li>
-                  </ul>
-                </nav>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <!-- profile section -->
+                  <div class="profile-section">
+                    <div class="img-div">
+                      <img src="./images/myPic (6).jpeg" alt="" />
+                    </div>
+                    <div class="top-information">
+                      <span>আশরাফ উজ্জামান</span>
+                      <span>ashraf.uzzaman04082004@gmail.com</span>
+                    </div>
+                  </div>
+
+                  <!-- list slider manu -->
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="javascript:void(0)"
+                          ><ion-icon name="call-outline"></ion-icon>
+                          +৮৮০১৭৪৯৯৩১৮৯১</a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)"
+                          ><ion-icon
+                            name="water-outline"
+                            style="color: red"
+                          ></ion-icon>
+                          রক্তের গ্রুপঃ O(+ve)</a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)"
+                          ><ion-icon name="calendar-number-outline"></ion-icon>
+                          সর্বশেষ রক্ত দানঃ</a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)"
+                          ><ion-icon name="fitness-outline"></ion-icon> মোট রক্ত
+                          দান করেছেনঃ ১বার</a
+                        >
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="pencil-outline"></ion-icon> রক্তদানের
+                          তারিখ আপডেট করুন</a
+                        >
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="cloud-upload-outline"></ion-icon>
+                          প্রফাইল আপডেট করুন</a
+                        >
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="log-out-outline"></ion-icon> লগ
+                          আউট</a
+                        >
+                      </li>
+                      <li>
+                        <a href=""
+                          ><ion-icon name="share-social-outline"></ion-icon>
+                          শেয়ার করুন</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </header>
+
+      <!-- slider container -->
+      <div class="container mx-auto py-1 py-lg-2">
+        <!-- slider section -->
+        <section class="bg-black">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./images/slider (7).png"
+                  class="w-auto img-fluid"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/slider (1).png"
+                  class="w-auto img-fluid"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
       </div>
-    </header>
+
+      <div class="container container-statistics">
+        <!-- statistics -->
+        <section class="statistics">
+          <div class="row m-0 p-0 text-center">
+            <div class="col-4">
+              <div class="icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANRJREFUSEvFlX0RwjAMR98UgAQkgASUAIqQADiYBCQgAQk4gMtdy5Vd2vTz2N/re/kl6TYx+JkG82kVHF2B11ihLQKBXxz4BKiSWsEaeAKroHJVUiMQ+AvYAvdAcgN8y77eUoEAzsAeeASSWYOLpUQQ9lwSeMnGtUudc64ghHuQSHYpeG4CDS5n1Z4vY1gJZPUOSvYsuJWgGZ4SdIHHBDF49LamvmfaDN7KgSp4LMFSUA3PETTBrS3q8quw7kGz5C8CbYtKkvwUnbumXQUlMPPd4TP4APh7JRlD59qMAAAAAElFTkSuQmCC"
+                />
+              </div>
+              <div class="text">
+                <span>000+</span>
+                <span>মোট রেজিস্ট্রেশন</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARVJREFUSEvVlOERATEQhb+rgA6MCugAFaADOqACOkAFqAAVUAIdKIEKmDcSE7ncOcEM+8cg9757bzeb8OVKvqzPTwPKwApo5aXwjoMd0ABmwCALEguQ4MQRlQsBUxULOAElR03iwahiAB2Tvf+2VeDo/xgDGAOjQBpdYP0XgCawDTj4WETSVkw9oAIczPdUPDro9sDOdd69UROV9T5wSMC2+W9jz7iAS8G9pBFVHPpU6UYrsrrz/NI4fHBQFCCdITA1ohIXxNZd3I8oDxAaZ0Uy91yrHxoC6y7aQSjNlPgrDp6152zePNX8mCb7sExx34FGUHP9avWBRdZDrgMtMV2gWkGCMtfaDq5pqxGz7Aryb8f+H3AFsLozGdH/YhYAAAAASUVORK5CYII="
+                />
+              </div>
+              <div class="text">
+                <span>000+</span>
+                <span>রক্ত দিয়েছেন</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="icon">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFRJREFUSEtjZKAxYKSx+QzEWvAfh0MI6ieoAGrwqAUEo3o0iMBBhCsYCIYfviSMnExHLUAPKXDoDK8gwpdaRjMawbw0GkQDH0QEXYBLAbF1MtkWAAC++BQZuFCLQQAAAABJRU5ErkJggg=="
+                />
+              </div>
+              <div class="text">
+                <span>000+</span>
+                <span>রক্ত প্রয়োজন</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- svg- top -->
+    <div class="svg-top" style="z-index: -1">
+      <svg
+        viewBox="15 12 1470 48"
+        fill="none"
+        style="color: #aa3333; position: relative; top: 0; display: block"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
 
     <!-- container body section  -->
     <div class="container p-0">
-      <!-- slider section -->
-      <section class="bg-red">
-        <div
-          id="carouselExampleAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="./images/slider (7).png"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./images/slider (1).png"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-
       <!-- features section -->
       <section class="features my-4 my-lg-5">
         <div class="row">
@@ -286,12 +358,44 @@
           </div>
         </div>
       </section>
+
+      <!-- Volunteers Needed to Help section -->
+      <section class="help my-3 my-lg-5">
+        <div
+          class="row m-0 flex-column-reverse text-center text-lg-start flex-lg-row"
+        >
+          <div class="text col-12 col-lg-6 px-4">
+            <span>রক্তদানে সাহায্য করার জন্য স্বেচ্ছাসেবকদের প্রয়োজন</span>
+            <p>
+              স্বেচ্ছাসেবক সুযোগের মধ্যে রয়েছে রক্তদানে সহায়তা করা এবং আপনার
+              সম্প্রদায়কে অত্যন্ত প্রয়োজনীয় পরিষেবা প্রদান করা।
+            </p>
+            <a href="javascript:void(0)">
+              <button class="btn">আরো জানুন</button>
+            </a>
+          </div>
+          <div class="img col-12 col-lg-6">
+            <img
+              src="./images/VeectezyActivism-WorldBloodDonorDay-Illustrationbv0421_generated-removebg-preview.png"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- footer section -->
     <!-- <footer>
       <div class="container"></div>
     </footer> -->
+
+    <!-- scroll to top button -->
+    <a href="#" title="উপরে যান" class="goToTop active" id="goToTop"
+      ><img
+        src="./images/vecteezy_space-rocket-launch-vector-illustration_5835164-removebg-preview (1).png"
+        alt=""
+    /></a>
 
     <!-- boostrap script link -->
     <script
@@ -319,5 +423,11 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- navbar scrolling effect -->
+    <script src="js/navBar.js"></script>
+
+    <!-- goto top button js -->
+    <script src="/js/goToTop.js"></script>
   </body>
 </html>
