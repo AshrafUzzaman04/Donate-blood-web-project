@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Life Blood</title>
+    <title>রক্ত দান</title>
     <!-- web icon -->
     <link rel="icon" href="./images/health medical center Logo (3).png" />
     <link rel="stylesheet" href="./css/index.css" />
@@ -14,32 +14,71 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
   </head>
 
   <body>
     <header>
       <div class="container">
-        <div>
-          <div class="mobile-div">
-            <!-- mobile manubar icon -->
-            <div
-              class="mobile-navbar d-md-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasWithBothOptions"
-              aria-controls="offcanvasWithBothOptions"
+        <!-- icon image -->
+        <div class="icon-img">
+          <a href="./" style="text-decoration: none"
+            ><img
+              src="./images/health medical center Logo (3).png"
+              alt=""
+              class="img-fluid"
+              width="44"
+            />
+            <span
+              class="text-danger fw-bold"
+              style="
+                font-size: 30px;
+                text-align: center;
+                vertical-align: middle;
+              "
             >
-              <ion-icon name="menu-outline"></ion-icon>
-              <ion-icon name="close-outline"> </ion-icon>
-            </div>
+              রক্ত দান</span
+            ></a
+          >
+        </div>
 
-            <!-- left side scroll manubar -->
+        <div class="manubar">
+          <!-- sign in button -->
+          <div class="signIn-btn">
+            <a href="/signIn.html"
+              ><ion-icon
+                name="log-in-outline"
+                style="font-size: 24px; font-weight: 800"
+              ></ion-icon>
+
+              সাইন ইন</a
+            >
+          </div>
+
+          <!-- manubar icon -->
+          <div
+            class="mobile-navbar d-flex justify-content-center align-items-center text-dark"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasLeft"
+            aria-controls="offcanvasLeft"
+          >
+            <ion-icon name="menu-outline" style="font-size: 36px"></ion-icon>
+          </div>
+
+          <!-- left side scroll manubar -->
+          <div class="side-bar border-0">
             <div
-              class="offcanvas offcanvas-start"
+              class="offcanvas offcanvas-start border-0"
               data-bs-scroll="true"
               tabindex="-1"
-              id="offcanvasWithBothOptions"
-              aria-labelledby="offcanvasWithBothOptionsLabel"
+              id="offcanvasLeft"
+              aria-labelledby="offcanvasLeftLabel"
             >
               <div class="offcanvas-header">
                 <div class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
@@ -59,11 +98,13 @@
                           text-align: center;
                           vertical-align: middle;
                         "
-                        >Donate Blood</span
+                      >
+                        রক্ত দান</span
                       ></a
                     >
                   </div>
                 </div>
+
                 <button
                   type="button"
                   class="btn-close"
@@ -72,17 +113,68 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <nav class="d-md-none">
+                <!-- profile section -->
+                <div class="profile-section">
+                  <div class="img-div">
+                    <img src="./images/myPic (6).jpeg" alt="" />
+                  </div>
+                  <div class="top-information">
+                    <span>আশরাফ উজ্জামান</span>
+                    <span>ashraf.uzzaman04082004@gmail.com</span>
+                  </div>
+                </div>
+
+                <!-- list slider manu -->
+                <nav>
                   <ul>
                     <li>
-                      <a href=""
-                        ><ion-icon name="home-outline"></ion-icon> Home</a
+                      <a href="javascript:void(0)"
+                        ><ion-icon name="call-outline"></ion-icon>
+                        +৮৮০১৭৪৯৯৩১৮৯১</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><ion-icon
+                          name="water-outline"
+                          style="color: red"
+                        ></ion-icon>
+                        রক্তের গ্রুপঃ O(+ve)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><ion-icon name="calendar-number-outline"></ion-icon>
+                        সর্বশেষ রক্ত দান</a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><ion-icon name="fitness-outline"></ion-icon> মোট রক্ত
+                        দান করেছেনঃ ১বার</a
                       >
                     </li>
                     <li>
                       <a href=""
-                        ><ion-icon name="fitness-outline"></ion-icon> Donate
-                        Bloods</a
+                        ><ion-icon name="pencil-outline"></ion-icon> রক্তদানের
+                        তারিখ আপডেট করুন</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        ><ion-icon name="cloud-upload-outline"></ion-icon>
+                        প্রফাইল আপডেট করুন</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        ><ion-icon name="log-out-outline"></ion-icon> লগ আউট</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        ><ion-icon name="share-social-outline"></ion-icon> শেয়ার
+                        করুন</a
                       >
                     </li>
                   </ul>
@@ -90,81 +182,116 @@
               </div>
             </div>
           </div>
-
-          <!-- icon image -->
-          <div class="icon-img d-none d-md-block">
-            <a href="./" style="text-decoration: none"
-              ><img
-                src="./images/health medical center Logo (3).png"
-                alt=""
-                class="img-fluid"
-                width="44"
-              />
-              <span
-                class="text-danger fw-bold"
-                style="
-                  font-size: 30px;
-                  text-align: center;
-                  vertical-align: middle;
-                "
-                >Donate Blood</span
-              ></a
-            >
-          </div>
-        </div>
-
-        <!-- icon image -->
-        <div class="icon-img d-md-none">
-          <a href="./" style="text-decoration: none"
-            ><img
-              src="./images/health medical center Logo (3).png"
-              alt=""
-              class="img-fluid"
-              width="44"
-            />
-            <span
-              class="text-danger fw-bold"
-              style="
-                font-size: 30px;
-                text-align: center;
-                vertical-align: middle;
-              "
-              >Donate Blood</span
-            ></a
-          >
-        </div>
-
-        <div class="manubar">
-          <!-- navigation bar -->
-          <nav class="d-md-flex">
-            <ul>
-              <li>
-                <a href=""><ion-icon name="home-outline"></ion-icon> Home</a>
-              </li>
-              <li>
-                <a href=""
-                  ><ion-icon name="fitness-outline"></ion-icon> Donate Bloods</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <!-- sign in button -->
-          <div class="signIn-btn">
-            <a href="/signIn.html"
-              ><ion-icon
-                name="log-in-outline"
-                style="font-size: 24px; font-weight: 800"
-              ></ion-icon>
-              Sign In</a
-            >
-          </div>
         </div>
       </div>
     </header>
 
     <!-- container body section  -->
-    <!-- <div class="container"></div> -->
+    <div class="container p-0">
+      <!-- slider section -->
+      <section class="bg-red">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/slider (7).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/slider (1).png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- features section -->
+      <section class="features my-4 my-lg-5">
+        <div class="row">
+          <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
+            <a href="javascript:void(0)">
+              <div class="icon-features">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <span>জরুরী রক্ত খুজুন</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
+            <a href="javascript:void(0)">
+              <div class="icon-features">
+                <i class="fa-solid fa-droplet"></i>
+              </div>
+              <span>রক্তদান করুন</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
+            <a href="javascript:void(0)">
+              <div class="icon-features">
+                <i class="fa-solid fa-circle-info"></i>
+              </div>
+              <span>রক্তদান বিষয়ে তথ্য</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
+            <a href="javascript:void(0)">
+              <div class="icon-features">
+                <i class="fa-solid fa-address-book"></i>
+              </div>
+              <span>যোগাযোগ করুন।</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
+            <a href="javascript:void(0)">
+              <div class="icon-features">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <span>আমাদের কার্যক্রম সমূহ</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
+            <a href="javascript:void(0)">
+              <div class="icon-features">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <span>রক্ত যোগান সম্পর্কে</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer section -->
+    <!-- <footer>
+      <div class="container"></div>
+    </footer> -->
 
     <!-- boostrap script link -->
     <script

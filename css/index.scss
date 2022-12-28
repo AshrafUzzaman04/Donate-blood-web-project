@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto Serif Bengali", serif;
 }
 
 // ===============================
@@ -11,102 +14,6 @@
 @media only screen and (max-width: 767px) {
   header {
     > .container {
-      > div {
-        display: inline-flex;
-        gap: 14px;
-
-        > .mobile-div {
-          // mobile manubar icon
-          > .mobile-navbar {
-            color: black;
-            font-size: 36px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: transparent;
-            z-index: 999;
-
-            > ion-icon[name="close-outline"] {
-              display: none;
-            }
-          }
-
-          // offcanvas use
-          > .offcanvas {
-            width: 330px !important;
-            > .offcanvas-header {
-              > .btn-close {
-                color: red !important;
-                &:focus {
-                  box-shadow: 0 !important;
-                  opacity: 0;
-                }
-              }
-            }
-            > .offcanvas-body {
-              // navigaiton manubar
-              > nav {
-                > ul {
-                  display: flex;
-                  justify-content: start;
-                  align-items: flex-start;
-                  vertical-align: middle;
-                  flex-direction: column;
-                  gap: 20px;
-                  margin: 0;
-                  padding: 0;
-                  padding-left: 10px;
-                  > li {
-                    list-style: none;
-                    position: relative;
-
-                    > a {
-                      text-decoration: none;
-                      color: black;
-                      font-weight: 700;
-                      font-size: 18px;
-                      transition: all 0.5s;
-                      text-align: center;
-                      justify-content: center;
-                      align-items: center;
-                      display: flex;
-                      gap: 6px;
-
-                      &:hover {
-                        color: black;
-                      }
-                    }
-
-                    // li before
-                    &::before {
-                      position: absolute;
-                      content: "";
-                      width: 100%;
-                      height: 3px;
-                      top: calc(100% - 3px);
-                      left: 0px;
-                      background-color: red;
-                      transform: scaleX(0);
-                      transform-origin: top;
-                      transition: transform 0.4s linear;
-                    }
-
-                    &:hover {
-                      &::before {
-                        transform: scaleX(1);
-                      }
-                      > a {
-                        color: brown;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
       // icon image
       > .icon-img {
         display: flex;
@@ -123,9 +30,6 @@
       }
 
       > .manubar {
-        > nav {
-          display: none;
-        }
         // sign in button
         .signIn-btn {
           > a {
@@ -136,88 +40,95 @@
       }
     }
   }
+
+  .container {
+    // features section
+    > .features {
+      > .row {
+        > div {
+          margin: 10px 10px;
+          > a {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            text-decoration: none;
+            border-radius: 18px;
+            border-top: 8px solid red;
+            padding: 20px 8px !important;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+            box-shadow: 0px 0px 20px -11px black;
+            transition: all 0.8s;
+
+            > .icon-features {
+              > i {
+                background-color: rgb(207, 0, 0);
+                border-radius: 50%;
+                padding: 14px !important;
+                color: white;
+                font-size: 20px !important;
+                margin-bottom: 18px;
+                transform: rotate(360deg);
+                transition: all 0.8s;
+              }
+
+              > .fa-droplet {
+                padding: 14px 16px !important;
+              }
+
+              > .fa-lightbulb {
+                padding: 14px 16px !important;
+              }
+            }
+            > span {
+              color: rgb(119, 119, 119);
+              font-size: 18px !important;
+              font-weight: 600;
+              transition: all 1s;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // ===============================
 // default style
 // ===============================
+
+// header
 header {
   width: 100%;
-  background-color: white;
-  box-shadow: 0 -10px 25px black;
+  background: white;
   padding: 18px 0;
+  box-shadow: 0 -10px 25px black;
+  z-index: 999;
+  position: relative;
 
   > .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     > .manubar {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-
-      // navigaiton manubar
-      > nav {
-        > ul {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          vertical-align: middle;
-          gap: 20px;
-          margin: 0;
-          padding: 0;
-          > li {
-            list-style: none;
-            position: relative;
-
-            > a {
-              text-decoration: none;
-              color: black;
-              font-weight: 700;
-              font-size: 18px;
-              transition: all 0.5s;
-              text-align: center;
-              justify-content: center;
-              align-items: center;
-              display: flex;
-              gap: 6px;
-
-              &:hover {
-                color: black;
-              }
-            }
-
-            // li before
-            &::before {
-              position: absolute;
-              content: "";
-              width: 100%;
-              height: 3px;
-              top: calc(100% - 3px);
-              left: 0px;
-              background-color: red;
-              transform: scaleX(0);
-              transform-origin: top;
-              transition: transform 0.4s linear;
-            }
-
-            &:hover {
-              &::before {
-                transform: scaleX(1);
-              }
-              > a {
-                color: brown;
-              }
-            }
-          }
-        }
-      }
+      justify-content: space-between;
 
       // sign in button
       > .signIn-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        margin-right: 10px;
         > ion-icon {
           &:host {
             stroke: none;
@@ -239,6 +150,195 @@ header {
 
           &:hover {
             background: linear-gradient(#6fb554, #1fbf15);
+          }
+        }
+      }
+
+      // <!-- left side scroll manubar -->
+      > .side-bar {
+        > .offcanvas {
+          min-width: 320px;
+          // header
+          > .offcanvas-header {
+            > .offcanvas-title {
+              // offcanvas icon image
+              > .icon-img {
+                > a {
+                  > img {
+                    width: 40px;
+                  }
+                  > span {
+                    font-size: 30px !important;
+                  }
+                }
+              }
+            }
+            > button {
+              border: 2px solid red;
+              border-radius: 50%;
+              font-size: 14px;
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+
+          // ofcanvas body
+          > .offcanvas-body {
+            padding: 0;
+            //<!-- profile section -->
+            > .profile-section {
+              text-align: center;
+              flex-direction: column;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-image: linear-gradient(
+                to top,
+                #ff0844 0%,
+                #ffb199 100%
+              );
+              padding: 20px;
+              color: white;
+
+              > .img-div {
+                > img {
+                  width: 140px;
+                  height: 150px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  padding-bottom: 10px;
+                }
+              }
+              > .top-information {
+                > span {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            // <!-- list slider manu -->
+            > nav {
+              margin-top: 10px;
+              > ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                > li {
+                  list-style: none;
+                  padding: 10px 0;
+                  transition: all 0.5s;
+
+                  &:hover {
+                    background-color: #ddd;
+                    > a {
+                      color: black;
+                    }
+                  }
+
+                  > a {
+                    text-decoration: none;
+                    color: rgb(119, 119, 119);
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    vertical-align: middle;
+                    padding-left: 15px;
+                    transition: all 0.5s;
+                    font-size: 20px;
+
+                    > ion-icon {
+                      vertical-align: middle;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin-right: 10px;
+                      font-weight: bold;
+                      color: green;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  // features section
+  > .features {
+    > .row {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > div {
+        margin: 20px 0;
+        > a {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid black;
+          text-decoration: none;
+          border-radius: 18px;
+          border-top: 8px solid red;
+          padding: 30px;
+          border-left: 0;
+          border-right: 0;
+          border-bottom: 0;
+          box-shadow: 0px 0px 20px -11px black;
+          transition: all 0.8s;
+
+          > .icon-features {
+            > i {
+              background-color: rgb(207, 0, 0);
+              border-radius: 50%;
+              padding: 16px;
+              color: white;
+              font-size: 24px;
+              margin-bottom: 18px;
+              transform: rotate(360deg);
+              transition: all 0.8s;
+            }
+
+            > .fa-droplet {
+              padding: 16px 19px !important;
+            }
+
+            > .fa-lightbulb {
+              padding: 16px 19px !important;
+            }
+          }
+          > span {
+            color: rgb(119, 119, 119);
+            font-size: 24px;
+            font-weight: 600;
+            transition: all 1s;
+            text-align: center;
+          }
+
+          &:hover {
+            border-top: 8px solid #ff4949;
+            > .icon-features {
+              > i {
+                background: linear-gradient(to right, #ff8e6c 0%, #ff0844 100%);
+                transform: rotate(0deg);
+              }
+            }
+            > span {
+              background: linear-gradient(to right, #ff8e6c 0%, #ff0844 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+            }
           }
         }
       }
