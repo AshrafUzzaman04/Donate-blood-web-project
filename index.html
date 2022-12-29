@@ -7,7 +7,6 @@
     <title>রক্ত দান</title>
     <!-- web icon -->
     <link rel="icon" href="./images/health medical center Logo (3).png" />
-    <link rel="stylesheet" href="./css/index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,6 +19,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+
+    <!-- boxicon cdn link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- swiper js cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- main css link -->
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
@@ -193,90 +207,107 @@
         </div>
       </header>
 
-      <!-- slider container -->
-      <div class="container mx-auto py-1 py-lg-2">
+      <!-- hero text container -->
+      <div class="container hero-text mt-0 text-center">
+        <h1 class="m-0 display-5">রক্তদাতাদের জরুরী প্রয়োজন</h1>
+        <p>আপনার রক্তদানের বিনিময়ে বাঁচতে পারে একটি জীবন।</p>
+      </div>
+      <!-- hero slider -->
+      <div class="container slider mx-auto py-2">
         <!-- slider section -->
-        <section class="bg-black">
-          <div
-            id="carouselExampleAutoplaying"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="./images/slider (7).png"
-                  class="w-auto img-fluid"
-                  alt="..."
-                />
+        <section class="">
+          <!-- Slider main container -->
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/slider (1).png" alt="" class="img-fluid" />
               </div>
-              <div class="carousel-item">
-                <img
-                  src="./images/slider (1).png"
-                  class="w-auto img-fluid"
-                  alt="..."
-                />
+              <div class="swiper-slide">
+                <img src="./images/slider (2).png" alt="" class="img-fluid" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider (3).png" alt="" class="img-fluid" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider (4).png" alt="" class="img-fluid" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider (5).png" alt="" class="img-fluid" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider (6).png" alt="" class="img-fluid" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider (7).png" alt="" class="img-fluid" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/slider (8).png" alt="" class="img-fluid" />
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div
+              class="swiper-button-next"
+              style="
+                --swiper-theme-color: rgb(255, 255, 255);
+                right: 10px;
+                left: auto;
+                background: #ff00004f;
+                border-radius: 50%;
+                padding: 25px 25px;
+                --swiper-navigation-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                vertical-align: middle;
+                top: 45%;
+              "
+            ></div>
+            <div
+              class="swiper-button-prev"
+              style="
+                --swiper-theme-color: rgb(255, 255, 255);
+                left: 10px;
+                right: auto;
+                background: #ff000099;
+                border-radius: 50%;
+                padding: 25px 25px;
+                --swiper-navigation-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                vertical-align: middle;
+                top: 45%;
+              "
+            ></div>
           </div>
         </section>
       </div>
 
+      <!-- statistics -->
       <div class="container container-statistics">
-        <!-- statistics -->
         <section class="statistics">
           <div class="row m-0 p-0 text-center">
             <div class="col-4">
               <div class="icon">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANRJREFUSEvFlX0RwjAMR98UgAQkgASUAIqQADiYBCQgAQk4gMtdy5Vd2vTz2N/re/kl6TYx+JkG82kVHF2B11ihLQKBXxz4BKiSWsEaeAKroHJVUiMQ+AvYAvdAcgN8y77eUoEAzsAeeASSWYOLpUQQ9lwSeMnGtUudc64ghHuQSHYpeG4CDS5n1Z4vY1gJZPUOSvYsuJWgGZ4SdIHHBDF49LamvmfaDN7KgSp4LMFSUA3PETTBrS3q8quw7kGz5C8CbYtKkvwUnbumXQUlMPPd4TP4APh7JRlD59qMAAAAAElFTkSuQmCC"
-                />
+                <i class="bx bxs-edit-alt"></i>
               </div>
               <div class="text">
-                <span>000+</span>
+                <span>000k+</span>
                 <span>মোট রেজিস্ট্রেশন</span>
               </div>
             </div>
             <div class="col-4">
               <div class="icon">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARVJREFUSEvVlOERATEQhb+rgA6MCugAFaADOqACOkAFqAAVUAIdKIEKmDcSE7ncOcEM+8cg9757bzeb8OVKvqzPTwPKwApo5aXwjoMd0ABmwCALEguQ4MQRlQsBUxULOAElR03iwahiAB2Tvf+2VeDo/xgDGAOjQBpdYP0XgCawDTj4WETSVkw9oAIczPdUPDro9sDOdd69UROV9T5wSMC2+W9jz7iAS8G9pBFVHPpU6UYrsrrz/NI4fHBQFCCdITA1ohIXxNZd3I8oDxAaZ0Uy91yrHxoC6y7aQSjNlPgrDp6152zePNX8mCb7sExx34FGUHP9avWBRdZDrgMtMV2gWkGCMtfaDq5pqxGz7Aryb8f+H3AFsLozGdH/YhYAAAAASUVORK5CYII="
-                />
+                <i class="bx bxs-donate-blood"></i>
               </div>
               <div class="text">
-                <span>000+</span>
+                <span>000k+</span>
                 <span>রক্ত দিয়েছেন</span>
               </div>
             </div>
             <div class="col-4">
               <div class="icon">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFRJREFUSEtjZKAxYKSx+QzEWvAfh0MI6ieoAGrwqAUEo3o0iMBBhCsYCIYfviSMnExHLUAPKXDoDK8gwpdaRjMawbw0GkQDH0QEXYBLAbF1MtkWAAC++BQZuFCLQQAAAABJRU5ErkJggg=="
-                />
+                <i class="bx bx-plus-medical"></i>
               </div>
               <div class="text">
                 <span>000+</span>
@@ -391,7 +422,7 @@
     </footer> -->
 
     <!-- scroll to top button -->
-    <a href="#" title="উপরে যান" class="goToTop active" id="goToTop"
+    <a href="#" title="উপরে যান" class="goToTop"
       ><img
         src="./images/vecteezy_space-rocket-launch-vector-illustration_5835164-removebg-preview (1).png"
         alt=""
@@ -429,5 +460,28 @@
 
     <!-- goto top button js -->
     <script src="/js/goToTop.js"></script>
+
+    <!-- swiper js slider link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
