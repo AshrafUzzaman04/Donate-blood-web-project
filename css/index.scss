@@ -216,11 +216,10 @@ body {
         flex-direction: column-reverse;
         > .text {
           > span {
-            font-size: 42px !important;
             line-height: 50px !important;
           }
           > p {
-            font-size: 20px !important;
+            font-size: 17px !important;
           }
           > a {
             text-decoration: none;
@@ -511,8 +510,7 @@ body {
 
   // scroll effect manubar
   header.sitcky {
-    background: rgba(255, 255, 255, 0.63);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.76);
     box-shadow: 0 -10px 25px black;
     padding: 10px 0;
 
@@ -696,7 +694,6 @@ body {
       align-items: center;
       > .text {
         > span {
-          font-size: 50px;
           background: linear-gradient(to right, #ff8e6c 0%, #ff0844 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
