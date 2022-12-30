@@ -80,10 +80,10 @@
             <!-- manubar icon -->
             <div
               class="mobile-navbar d-flex justify-content-center align-items-center text-white"
-              type="button"
               data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasWithBothOptions"
-              aria-controls="offcanvasWithBothOptions"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
             >
               <ion-icon name="menu-outline" style="font-size: 36px"></ion-icon>
             </div>
@@ -92,10 +92,10 @@
             <div class="side-bar border-0">
               <div
                 class="offcanvas offcanvas-start border-0"
-                data-bs-scroll="true"
+                class="offcanvas offcanvas-start"
                 tabindex="-1"
-                id="offcanvasWithBothOptions"
-                aria-labelledby="offcanvasWithBothOptionsLabel"
+                id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel"
               >
                 <div class="offcanvas-header">
                   <div
@@ -351,11 +351,11 @@
           </div>
 
           <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
-            <a href="javascript:void(0)">
+            <a href="./donateBlood.html">
               <div class="icon-features">
                 <i class="fa-solid fa-droplet"></i>
               </div>
-              <span>রক্তদান করুন</span>
+              <span>রক্তের সন্ধান করুন</span>
             </a>
           </div>
           <div class="col-6 col-md-6 col-lg-4 col-xxl-3">
@@ -425,13 +425,15 @@
     <!------------------------------ footer section ---------------------------------->
     <!-- -------------------------------------------------------------------------- -->
     <footer class="text-center text-lg-start bg-white text-muted">
-      <!-- Section: Links  -->
-      <section class="" style="background-color: #aa3333">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+      <!-- Section: Links start -->
+      <section style="background-color: #aa3333">
+        <div class="container-lg p-0 text-start mt-5">
+          <!-- Grid row start -->
+          <div
+            class="d-flex flex-column flex-md-row align-items-start justify-content-md-between"
+          >
+            <!-- Grid column 1 started-->
+            <div class="mt-3 mt-md-4 mb-3">
               <!-- Content -->
               <a href="./" style="text-decoration: none"
                 ><img
@@ -440,41 +442,33 @@
                   class="img-fluid"
                   width="44"
                 />
-                <span
-                  class="fw-bold"
-                  style="
-                    font-size: 30px;
-                    text-align: center;
-                    vertical-align: middle;
-                    color: white;
-                  "
-                >
-                  রক্ত দান</span
-                ></a
+                <span class="fw-bold"> রক্ত দান</span></a
               >
               <p>আমাদের মোবাইল এপ্স ডাউনলোড করুন</p>
               <!-- mobile app link section -->
               <div class="mobile-app-link">
                 <a href="javascript:void(0)"
                   ><img
-                    src="./images/Google_Play-Badge-Logo.wine.svg"
+                    src="./images/Google_Play-Badge-Logo.wine.png"
                     alt=""
-                    class="img-fluid"
+                    class="img-fluid m-0 p-0"
+                    width="100px"
                 /></a>
                 <a href="javascript:void(0)"
                   ><img
-                    src="./images/Google_Play-Badge-Logo.wine.svg"
+                    src="./images/App_Store_(iOS)-Badge-Logo.wine.png"
                     alt=""
-                    class="img-fluid"
+                    class="img-fluid m-0 p-0"
+                    width="100px"
                 /></a>
               </div>
             </div>
-            <!-- Grid column -->
+            <!-- Grid column 1 end -->
 
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Grid column 2 started -->
+            <div class="mt-3 mt-md-4 mb-3">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">স্যাট নীতি</h6>
+              <h6 class="text-uppercase fw-bold mb-3">স্যাট নীতি</h6>
               <p>
                 <a href="#!" class="text-reset">গোপনীয়তা নীতি</a>
               </p>
@@ -488,16 +482,24 @@
                 <a href="#!" class="text-reset">কুকিজ নীতি</a>
               </p>
             </div>
-            <!-- Grid column -->
+            <!-- Grid column  2 end -->
 
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Grid column 3 started-->
+            <div class="mt-3 mt-md-4 mb-3">
               <!-- subscribe -->
               <div class="subscribe">
-                <span>আমাদের নিউজলেটার সাবস্ক্রাইব করুন</span>
+                <span class="fw-bold">আমাদের নিউজলেটার সাবস্ক্রাইব করুন</span>
                 <form action="">
-                  <input type="email" placeholder="example@gmail.com" />
-                  <input type="submit" value="সাবস্ক্রাইব করুন" />
+                  <input
+                    class="email"
+                    type="email"
+                    placeholder="example@gmail.com"
+                  />
+                  <input
+                    class="submit"
+                    type="submit"
+                    value="সাবস্ক্রাইব করুন"
+                  />
                 </form>
               </div>
               <div class="list-item">
@@ -508,62 +510,75 @@
                 </ul>
               </div>
             </div>
-            <!-- Grid column -->
+            <!-- Grid column 3 end -->
           </div>
-          <!-- Grid row -->
+          <!-- grid row end -->
         </div>
       </section>
-      <!-- Section: Links  -->
+      <!-- Section: Links end -->
 
       <!-- Section: logo media -->
-      <section
-        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-      >
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>সামাজিক যোগাযোগ মাধ্যম গুলোতে আমাদের সাথে সংযুক্ত থাকুনঃ</span>
-        </div>
-        <!-- Left -->
+      <div class="logo-media" style="background-color: #aa3333e7">
+        <section
+          class="container-md d-flex justify-content-center vertical-center justify-content-lg-between py-2 px-5 border-bottom"
+        >
+          <!-- Left -->
+          <div
+            class="me-5 d-none d-lg-flex justify-content-center align-items-center text-white"
+          >
+            <span class="vertical-center my-auto py-auto"
+              >সামাজিক যোগাযোগ মাধ্যম গুলোতে আমাদের সাথে সংযুক্ত থাকুনঃ</span
+            >
+          </div>
+          <!-- Left -->
 
-        <!-- Right -->
-        <div>
-          <!-- Facebook -->
-          <a href="javascript:void(0)" style="text-decoration: none">
-            <i class="fab fa-facebook-f fa-2x" style="color: #3b5998"></i>
-          </a>
+          <!-- Right -->
+          <div>
+            <!-- Facebook -->
+            <a href="javascript:void(0)" style="text-decoration: none">
+              <i class="fab fa-facebook-f fa-2x" style="color: #3b5998"></i>
+            </a>
 
-          <!-- Twitter -->
-          <a href="javascript:void(0)" style="text-decoration: none">
-            <i class="fab fa-twitter fa-2x" style="color: #55acee"></i>
-          </a>
+            <!-- Twitter -->
+            <a href="javascript:void(0)" style="text-decoration: none">
+              <i class="fab fa-twitter fa-2x" style="color: #55acee"></i>
+            </a>
 
-          <!-- Instagram -->
-          <a href="javascript:void(0)" style="text-decoration: none">
-            <i class="fab fa-instagram fa-2x" style="color: #ac2bac"></i>
-          </a>
+            <!-- Instagram -->
+            <a href="javascript:void(0)" style="text-decoration: none">
+              <i class="fab fa-instagram fa-2x" style="color: #55009b"></i>
+            </a>
 
-          <!-- Linkedin -->
-          <a href="javascript:void(0)" style="text-decoration: none">
-            <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca"></i>
-          </a>
+            <!-- Linkedin -->
+            <a
+              href="https://www.linkedin.com/in/ashrafuzzaman04/"
+              style="text-decoration: none"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in fa-2x" style="color: #0082ca"></i>
+            </a>
 
-          <!-- Youtube -->
-          <a href="javascript:void(0)" style="text-decoration: none">
-            <i class="fab fa-youtube fa-2x" style="color: #ed302f"></i>
-          </a>
+            <!-- Youtube -->
+            <a href="javascript:void(0)" style="text-decoration: none">
+              <i class="fab fa-youtube fa-2x" style="color: #ed302f"></i>
+            </a>
 
-          <!-- Whatsapp -->
-          <a href="javascript:void(0)" style="text-decoration: none">
-            <i class="fab fa-whatsapp fa-2x" style="color: #25d366"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
+            <!-- Whatsapp -->
+            <a href="javascript:void(0)" style="text-decoration: none">
+              <i class="fab fa-whatsapp fa-2x" style="color: #25d366"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+      </div>
       <!-- Section: Social media -->
 
       <!-- Copyright -->
-      <div class="text-center p-4" style="background-color: white">
-        © ২০২৩ রক্ত দাতা। সমস্ত অধিকার সংরক্ষিত।
+      <div
+        class="text-center px-4 py-2 border-0 fw-semibold"
+        style="background-color: white; color: rgb(119, 119, 119)"
+      >
+        © ২০২৩ কপিরাইটঃ রক্ত দাতা। সমস্ত অধিকার সংরক্ষিত।
       </div>
       <!-- Copyright -->
     </footer>
@@ -609,9 +624,11 @@
     <!-- goto top button js -->
     <script src="/js/goToTop.js"></script>
 
+    <!-- statistics count the number js link -->
+    <script src="./js/statisticsCount.js"></script>
+
     <!-- swiper js slider link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {

@@ -16,6 +16,7 @@
 }
 body {
   scroll-behavior: smooth;
+  background-color: white;
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -325,6 +326,7 @@ body {
             min-width: 320px;
             // header
             > .offcanvas-header {
+              padding: 10px 20px !important;
               > .offcanvas-title {
                 // offcanvas icon image
                 > .icon-img {
@@ -612,6 +614,7 @@ body {
   }
 }
 
+// main body container
 .container {
   // features section
   > .features {
@@ -734,6 +737,183 @@ body {
   }
 }
 
+// footer
+footer {
+  > section {
+    > .container-lg {
+      padding: 14px !important;
+      > div {
+        display: flex;
+        flex-direction: row;
+        > div {
+          color: white;
+        }
+        > :nth-child(1) {
+          > a {
+            > img {
+              padding: 6px;
+              background: linear-gradient(
+                to right,
+                #6fb554 0%,
+                #46e73b 50%,
+                #aa3333 100%
+              );
+              border-radius: 50%;
+            }
+            > span {
+              color: white;
+              font-size: 30px;
+              text-align: center;
+              vertical-align: middle;
+            }
+          }
+          > p {
+            color: #2bff00;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px 0;
+          }
+          > .mobile-app-link {
+            > a {
+              > img {
+                margin: 0;
+                padding: 0;
+              }
+            }
+          }
+        }
+        > :nth-child(2) {
+          > p {
+            margin: 0;
+            font-weight: 300;
+            > a {
+              color: rgba(255, 255, 255, 0.836);
+              line-height: 26px;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+                color: #2bff00;
+              }
+            }
+          }
+        }
+        > :nth-child(3) {
+          > .subscribe {
+            > form {
+              display: flex;
+              > .email {
+                padding: 10px 0;
+                padding-left: 8px;
+                border: none;
+                border-radius: 8px 0 0 8px;
+                &:focus {
+                  outline: 0;
+                }
+                &::placeholder {
+                  color: rgb(214, 214, 214);
+                }
+              }
+              > .submit {
+                background: linear-gradient(
+                  to right,
+                  #67a74e,
+                  #8ecf42,
+                  #67a74e
+                );
+                font-weight: 500;
+                border: none;
+                border-radius: 0 8px 8px 0;
+                padding: 10px;
+                vertical-align: middle;
+                text-align: center;
+                color: white;
+                font-size: 17px;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                  background: linear-gradient(#6fb554, #1fbf15);
+                }
+              }
+            }
+          }
+          > .list-item {
+            margin: 15px 0;
+            > ul {
+              display: flex;
+              padding: 0;
+              gap: 25px;
+              justify-content: start;
+              > li {
+                list-style: none;
+                > a {
+                  text-decoration: none;
+                  color: rgba(255, 255, 255, 0.836);
+                  font-weight: 300;
+                  font-size: 17px;
+                  transition: all 0.3s ease-in-out;
+
+                  &:hover {
+                    text-decoration: underline;
+                    color: #2bff00;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Section: logo media
+  > .logo-media {
+    > section {
+      > :nth-child(2) {
+        > a {
+          > i {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.836);
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+          }
+        }
+        > :nth-child(1) {
+          > i {
+            padding: 10px 14px;
+          }
+        }
+        > :nth-child(2) {
+          > i {
+            padding: 10px 10px;
+          }
+        }
+        > :nth-child(3) {
+          > i {
+            padding: 10px 11px;
+          }
+        }
+        > :nth-child(4) {
+          > i {
+            padding: 10px 11px;
+          }
+        }
+        > :nth-child(5) {
+          > i {
+            padding: 10px 8px;
+          }
+        }
+        > :nth-child(6) {
+          > i {
+            padding: 10px 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
 // go to top button
 .goToTop {
   position: fixed;
@@ -754,10 +934,13 @@ body {
   position: fixed;
   right: 2%;
   bottom: 3%;
-  opacity: 1;
+  opacity: 70%;
   transition: all 0.5s;
   > img {
     width: 50px;
+  }
+  &:hover {
+    opacity: 1;
   }
 }
 
