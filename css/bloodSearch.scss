@@ -383,15 +383,21 @@ header {
       padding: 40px;
       border-radius: 10px;
       transition: all 0.5s ease-in-out;
+      overflow: hidden;
 
       > i {
         color: red;
         font-size: 26px;
+        transition: all 0.5s ease-in-out;
       }
 
       &:hover {
         box-shadow: inset 2px 2px 7px #0000008a;
         color: #6fb554;
+        transform: scale(1);
+        > i {
+          transform: scale(1.2);
+        }
       }
     }
   }

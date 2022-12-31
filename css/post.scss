@@ -380,6 +380,7 @@ header {
 
 .body-container {
   max-width: 700px;
+  padding: 0px 5px;
   transition: all 0.5s ease-in-out;
 
   &.body-containersticky {
@@ -518,6 +519,47 @@ header {
       }
       100% {
         transform: translateY(0.5rem);
+      }
+    }
+  }
+
+  // our Activities post style
+  > .fade {
+    > .modal-dialog {
+      > .modal-content {
+        // modal header
+        > .modal-header {
+          margin: 0;
+          padding: 16px 20px 6px;
+          border: none;
+
+          > button {
+            opacity: 1;
+            &:focus {
+              outline: none;
+              opacity: 1;
+            }
+          }
+        }
+        > .modal-body {
+          > form {
+            > div {
+              position: relative;
+              > label {
+                > i {
+                  position: absolute;
+                  bottom: 25px;
+                  left: 75px;
+                  padding: 10px;
+                  font-size: 20px;
+                  background-color: #ddd;
+                  color: black;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

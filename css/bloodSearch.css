@@ -296,12 +296,18 @@ header > section > .container > .manubar > a.active > i {
   padding: 40px;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 .container-body > .search > a > i {
   color: red;
   font-size: 26px;
+  transition: all 0.5s ease-in-out;
 }
 .container-body > .search > a:hover {
   box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.5411764706);
   color: #6fb554;
+  transform: scale(1);
+}
+.container-body > .search > a:hover > i {
+  transform: scale(1.2);
 }/*# sourceMappingURL=bloodSearch.css.map */

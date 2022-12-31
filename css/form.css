@@ -97,10 +97,19 @@ div.mainDiv {
   outline: none;
 }
 input {
+  position: relative;
   border-radius: 71px;
   border: none;
   margin: 8px;
   width: 100%;
+}
+.form-border i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-70%, -92%);
+  cursor: pointer;
+  color: #818181;
 }
 div.forget {
   float: right;
