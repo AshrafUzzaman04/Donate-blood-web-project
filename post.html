@@ -24,7 +24,7 @@
       rel="stylesheet"
     />
     <!-- main css link -->
-    <link rel="stylesheet" href="./css/donateBlood.css" />
+    <link rel="stylesheet" href="./css/post.css" />
   </head>
   <body>
     <!-- header div started here -->
@@ -198,10 +198,7 @@
             <a href="./" title="হোমে ফিরুন"
               ><i class="fa-solid fa-house" style="color: #6fb554"></i
             ></a>
-            <a
-              href="./donateBlood.html"
-              title="রক্তের জন্য পোস্ট সমূহ"
-              class="active"
+            <a href="./donateBlood.html" title="রক্তের জন্য পোস্ট সমূহ"
               ><i
                 class="fa-solid fa-hand-holding-droplet"
                 style="color: #6fb554"
@@ -213,7 +210,7 @@
                 style="color: #6fb554"
               ></i
             ></a>
-            <a href="./post.html" title="পোস্ট করুন"
+            <a href="./post.html" title="পোস্ট করুন" class="active"
               ><i class="fa-solid fa-earth-americas" style="color: #6fb554"></i
             ></a>
           </div>
@@ -231,7 +228,7 @@
         data-bs-target="#exampleModal"
         data-bs-whatever="@mdo"
       >
-        <span>রক্তের জন্য পোস্ট করুন।</span>
+        <span>আপনার কার্যক্রম সমূহ পোস্ট করুন</span>
       </div>
 
       <!-- post show in newsfeed -->
@@ -246,69 +243,18 @@
               <span>21h</span>
             </div>
           </div>
-          <div class="card-body">
-            <p>
+          <div class="card-body p-0">
+            <p style="padding: 0px 14px">
               আমার এক দূরসম্পর্কের আত্নীয় খুব অসুস্থ দ্রুত রক্তের প্রয়োজন প্লিজ
               কেউ দ্রুত আমার সাথে যোগাযোগ করুন।
             </p>
-            <table>
-              <tbody>
-                <tr>
-                  <th><span>রক্তের গ্রুপঃ </span></th>
-                  <td><span> O+</span></td>
-                </tr>
-                <tr>
-                  <th><span>রোগীর সমস্যাঃ </span></th>
-                  <td><span> রক্ত সল্পতা</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তের পরিমানঃ </span></th>
-                  <td><span> ২ ব্যাগ</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তদানের সময়ঃ </span></th>
-                  <td><span> ১২ ঘটিকা</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তদানের তারিখঃ </span></th>
-                  <td><span> ১৫/০১/২৩</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তদানের স্থানঃ </span></th>
-                  <td><span> ঢাকা মেডিকেল হাসপাতাল, ঢাকা।</span></td>
-                </tr>
-                <tr>
-                  <th><span>রোগীর লোকের নম্বরঃ </span></th>
-                  <td><span> ০১৭৪৯৯৩১৮৯১</span></td>
-                </tr>
-                <tr>
-                  <th><span>হিমোগ্লোবিনের পরিমানঃ </span></th>
-                  <td><span> ০.৭৫%(খুব কম)</span></td>
-                </tr>
-                <tr>
-                  <th><span>রেফারেন্সঃ </span></th>
-                  <td><span> আমি নিজেই</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="footer">
-            <div class="phone">
-              <a href="tel:+8801749931891p"
-                ><i class="fa-solid fa-phone-volume"></i><span>ফোন</span></a
-              >
-            </div>
-            <div class="sms">
-              <a href="sms:+8801749931891?&body=আসসালামুআলাইকুম,..."
-                ><i class="fa-solid fa-comment-dots"></i
-                ><span>এস.এম.এস</span></a
-              >
-            </div>
-            <div class="email">
-              <a href="mailto:ashraf.uzzaman04082004@gmail.com"
-                ><i class="fa-solid fa-envelope-open-text"></i
-                ><span>ইমেইল</span></a
-              >
+            <div class="img" style="background-color: rgb(228 228 228 / 44%)">
+              <img
+                src="./images/myPic (6).jpeg"
+                class="img-fluid"
+                alt=""
+                style="object-fit: contain; min-width: 100%; max-height: 500px"
+              />
             </div>
           </div>
         </div>
@@ -322,8 +268,9 @@
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
         data-bs-whatever="@mdo"
+        title="পোস্ট করুন"
       >
-        <ion-icon name="pencil-outline"></ion-icon>
+        <i class="fa-solid fa-image"></i>
       </button>
 
       <div

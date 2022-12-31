@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>রক্ত দান। রক্তের জন্য পোস্ট</title>
+    <title>রক্তদান । রক্ত খুজুন</title>
     <!-- web icon -->
     <link rel="icon" href="./images/health medical center Logo (3).png" />
+
+    <!-- boostrap cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,7 +26,7 @@
       rel="stylesheet"
     />
     <!-- main css link -->
-    <link rel="stylesheet" href="./css/donateBlood.css" />
+    <link rel="stylesheet" href="./css/bloodSearch.css" />
   </head>
   <body>
     <!-- header div started here -->
@@ -198,16 +200,13 @@
             <a href="./" title="হোমে ফিরুন"
               ><i class="fa-solid fa-house" style="color: #6fb554"></i
             ></a>
-            <a
-              href="./donateBlood.html"
-              title="রক্তের জন্য পোস্ট সমূহ"
-              class="active"
+            <a href="./donateBlood.html" title="রক্তের জন্য পোস্ট সমূহ"
               ><i
                 class="fa-solid fa-hand-holding-droplet"
                 style="color: #6fb554"
               ></i
             ></a>
-            <a href="./bloodSearch.html" title="রক্ত খুজুন"
+            <a href="./bloodSearch.html" title="রক্ত খুজুন" class="active"
               ><i
                 class="fa-solid fa-magnifying-glass"
                 style="color: #6fb554"
@@ -222,164 +221,18 @@
     </header>
 
     <!-- body container -->
-    <div class="container body-container" id="body-container">
-      <!-- post section -->
-      <div
-        class="post-section pointer-event"
-        title="ক্লিক করুন"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        data-bs-whatever="@mdo"
-      >
-        <span>রক্তের জন্য পোস্ট করুন।</span>
-      </div>
-
-      <!-- post show in newsfeed -->
-      <div class="newsfeed">
-        <div class="card">
-          <div class="card-header bg-white border-0">
-            <div class="img">
-              <img src="./images/myPic (6).jpeg" alt="" class="img-fluid" />
-            </div>
-            <div class="name">
-              <span>Ashraf Uzzaman</span>
-              <span>21h</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <p>
-              আমার এক দূরসম্পর্কের আত্নীয় খুব অসুস্থ দ্রুত রক্তের প্রয়োজন প্লিজ
-              কেউ দ্রুত আমার সাথে যোগাযোগ করুন।
-            </p>
-            <table>
-              <tbody>
-                <tr>
-                  <th><span>রক্তের গ্রুপঃ </span></th>
-                  <td><span> O+</span></td>
-                </tr>
-                <tr>
-                  <th><span>রোগীর সমস্যাঃ </span></th>
-                  <td><span> রক্ত সল্পতা</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তের পরিমানঃ </span></th>
-                  <td><span> ২ ব্যাগ</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তদানের সময়ঃ </span></th>
-                  <td><span> ১২ ঘটিকা</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তদানের তারিখঃ </span></th>
-                  <td><span> ১৫/০১/২৩</span></td>
-                </tr>
-                <tr>
-                  <th><span>রক্তদানের স্থানঃ </span></th>
-                  <td><span> ঢাকা মেডিকেল হাসপাতাল, ঢাকা।</span></td>
-                </tr>
-                <tr>
-                  <th><span>রোগীর লোকের নম্বরঃ </span></th>
-                  <td><span> ০১৭৪৯৯৩১৮৯১</span></td>
-                </tr>
-                <tr>
-                  <th><span>হিমোগ্লোবিনের পরিমানঃ </span></th>
-                  <td><span> ০.৭৫%(খুব কম)</span></td>
-                </tr>
-                <tr>
-                  <th><span>রেফারেন্সঃ </span></th>
-                  <td><span> আমি নিজেই</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="footer">
-            <div class="phone">
-              <a href="tel:+8801749931891p"
-                ><i class="fa-solid fa-phone-volume"></i><span>ফোন</span></a
-              >
-            </div>
-            <div class="sms">
-              <a href="sms:+8801749931891?&body=আসসালামুআলাইকুম,..."
-                ><i class="fa-solid fa-comment-dots"></i
-                ><span>এস.এম.এস</span></a
-              >
-            </div>
-            <div class="email">
-              <a href="mailto:ashraf.uzzaman04082004@gmail.com"
-                ><i class="fa-solid fa-envelope-open-text"></i
-                ><span>ইমেইল</span></a
-              >
-            </div>
-          </div>
-        </div>
+    <div class="container container-body" id="body-container">
+      <div class="search">
+        <a href=""><i class="fa-solid fa-droplet"></i>A+</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>A-</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>B+</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>B-</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>O+</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>O-</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>AB+</a>
+        <a href=""><i class="fa-solid fa-droplet"></i>AB-</a>
       </div>
     </div>
-
-    <!-- post button -->
-    <div class="post-icon">
-      <button
-        type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        data-bs-whatever="@mdo"
-      >
-        <ion-icon name="pencil-outline"></ion-icon>
-      </button>
-
-      <div
-        class="modal fade"
-        id="exampleModal"
-        style="z-index: 100000"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                New message
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label"
-                    >Recipient:</label
-                  >
-                  <input type="text" class="form-control" id="recipient-name" />
-                </div>
-                <div class="mb-3">
-                  <label for="message-text" class="col-form-label"
-                    >Message:</label
-                  >
-                  <textarea class="form-control" id="message-text"></textarea>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Send message
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- boostrap script link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

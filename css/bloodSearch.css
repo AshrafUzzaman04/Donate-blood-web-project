@@ -44,58 +44,32 @@ body {
     background-color: white;
     box-shadow: 0px 0px 7px rgb(148, 148, 148);
   }
-  .body-container.body-containersticky {
-    margin-top: 98px !important;
+  .container-body {
+    max-width: 800px;
   }
-  .body-container > .post-section {
-    margin-top: 12px !important;
-    padding: 6px 12px !important;
-    background-color: rgba(221, 221, 221, 0.5803921569);
-    border-radius: 50px;
-    color: rgba(188, 0, 0, 0.5294117647);
-    cursor: pointer;
-    font-size: 14px !important;
+  .container-body.body-containersticky {
+    position: relative;
+    margin-top: 86px;
+    transition: all 0.5s ease-in-out;
   }
-  .body-container > .post-section:hover {
-    background-color: #ddd;
-    color: rgba(214, 0, 0, 0.6235294118);
+  .container-body > .search {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 26px !important;
   }
-  .body-container > .newsfeed > .card > .card-header {
-    display: inline-flex;
+}
+@media only screen and (min-width: 480px) and (max-width: 990px) {
+  .container-body {
+    max-width: 800px;
   }
-  .body-container > .newsfeed > .card > .card-header > .name {
-    display: inline-flex;
-    flex-direction: column;
-    line-height: 19px;
-    margin-right: 10px;
-    font-size: 15px;
+  .container-body.body-containersticky {
+    position: relative;
+    margin-top: 86px;
+    transition: all 0.5s ease-in-out;
   }
-  .body-container > .newsfeed > .card > .card-header > .name > :nth-child(1) {
-    font-weight: 600;
-    color: rgb(102, 102, 102);
-  }
-  .body-container > .newsfeed > .card > .card-header > .name > :nth-child(2) {
-    color: rgb(138, 138, 138);
-  }
-  .body-container > .newsfeed > .card > .card-body > p {
-    font-size: 15px !important;
-  }
-  .body-container > .newsfeed > .card > .card-body > table {
-    margin: 0;
-  }
-  .body-container > .newsfeed > .card > .card-body > table > tbody {
-    line-height: 22px !important;
-    font-size: 14px;
-  }
-  .body-container > .newsfeed > .card > .card-body > table > tbody > tr > th {
-    vertical-align: top !important;
-  }
-  .body-container > .newsfeed > .card > .card-body > table > tbody > tr > td {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    padding-left: 5px !important;
-    vertical-align: top !important;
+  .container-body > .search {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 25px !important;
   }
 }
 header {
@@ -296,135 +270,38 @@ header > section > .container > .manubar > a.active > i {
   box-shadow: 0px 0px 5px rgb(148, 148, 148);
 }
 
-.body-container {
-  max-width: 700px;
-  padding: 0px 4px;
-  transition: all 0.5s ease-in-out;
+.container-body {
+  max-width: 800px;
+  padding: 10px;
 }
-.body-container.body-containersticky {
+.container-body.body-containersticky {
   position: relative;
   margin-top: 86px;
   transition: all 0.5s ease-in-out;
 }
-.body-container > .post-section {
-  margin-top: 12px;
-  padding: 6px 15px;
-  background-color: rgba(221, 221, 221, 0.5803921569);
-  border-radius: 50px;
-  color: rgba(188, 0, 0, 0.5294117647);
-  cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease-in-out;
+.container-body > .search {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
-.body-container > .post-section:hover {
-  background-color: #ddd;
-  color: rgba(214, 0, 0, 0.6235294118);
-}
-.body-container > .newsfeed > .card {
-  margin: 10px 0;
-}
-.body-container > .newsfeed > .card > .card-header {
-  display: inline-flex;
-}
-.body-container > .newsfeed > .card > .card-header > .img {
-  margin-right: 10px;
-}
-.body-container > .newsfeed > .card > .card-header > .img > img {
-  width: 40px;
-  height: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-}
-.body-container > .newsfeed > .card > .card-header > .name {
-  display: inline-flex;
-  flex-direction: column;
-  line-height: 19px;
-  margin-right: 10px;
-}
-.body-container > .newsfeed > .card > .card-header > .name > :nth-child(1) {
-  font-weight: 600;
-  color: rgb(102, 102, 102);
-}
-.body-container > .newsfeed > .card > .card-header > .name > :nth-child(2) {
-  color: rgb(138, 138, 138);
-}
-.body-container > .newsfeed > .card > .card-body > table > tbody {
-  line-height: 27px;
-}
-.body-container > .newsfeed > .card > .card-body > table > tbody > tr > th {
-  vertical-align: top !important;
-}
-.body-container > .newsfeed > .card > .card-body > table > tbody > tr > td {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding-left: 10px;
-  vertical-align: top !important;
-}
-.body-container > .newsfeed > .card > .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  margin: 20px 15px;
-  padding: 6px 24px;
-  border: 1px solid rgb(158, 158, 158);
-  border-radius: 10px;
-}
-.body-container > .newsfeed > .card > .footer > div > a {
+.container-body > .search > a {
+  background-color: white;
   text-decoration: none;
-  font-size: 25px;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  font-weight: bold;
+  padding: 40px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
-.body-container > .newsfeed > .card > .footer > div > a > i {
-  background: linear-gradient(to right, #30ff21, rgba(112, 181, 84, 0.8705882353), #6fb554);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.container-body > .search > a > i {
+  color: red;
+  font-size: 26px;
 }
-.body-container > .newsfeed > .card > .footer > div > a > span {
-  color: rgb(131, 131, 131);
-  font-weight: 600;
-  font-size: 12px;
-}
-
-.post-icon {
-  background-color: transparent;
-}
-.post-icon > button {
-  background-color: red;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-radius: 50%;
-  color: white;
-  font-size: 24px;
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  box-shadow: 0 0 3px #000000;
-  animation: button 0.8s linear infinite alternate-reverse;
-}
-@-webkit-keyframes button {
-  0% {
-    transform: translateY(-0.3rem);
-  }
-  100% {
-    transform: translateY(0.5rem);
-  }
-}
-@keyframes button {
-  0% {
-    transform: translateY(-0.3rem);
-  }
-  100% {
-    transform: translateY(0.5rem);
-  }
-}/*# sourceMappingURL=donateBlood.css.map */
+.container-body > .search > a:hover {
+  box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.5411764706);
+  color: #6fb554;
+}/*# sourceMappingURL=bloodSearch.css.map */
