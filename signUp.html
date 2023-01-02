@@ -46,16 +46,40 @@
             <input type="email" name="email" placeholder="ইমেইল" />
           </div>
           <div class="form-border">
-            <input type="password" name="password" placeholder="পাসওয়ার্ড" />
-            <i class="fa-solid fa-eye-slash"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="পাসওয়ার্ড"
+            />
+            <ion-icon
+              name="eye-off-outline"
+              id="show"
+              onclick="toggle()"
+            ></ion-icon>
+            <ion-icon
+              name="eye-outline"
+              id="hide"
+              onclick="toggle()"
+            ></ion-icon>
           </div>
           <div class="form-border">
             <input
               type="password"
+              id="Cpassword"
               name="Cpassword"
               placeholder="পাসওয়ার্ড নিশ্চিত করুন"
             />
-            <i class="fa-solid fa-eye-slash"></i>
+            <ion-icon
+              name="eye-off-outline"
+              id="Cshow"
+              onclick="Ctoggle()"
+            ></ion-icon>
+            <ion-icon
+              name="eye-outline"
+              id="Chide"
+              onclick="Ctoggle()"
+            ></ion-icon>
           </div>
           <div class="forget" style="font-size: 14px">
             <span>একাউন্ট আছে? </span>
@@ -96,5 +120,47 @@
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
       crossorigin="anonymous"
     ></script>
+
+    <!-- ionicons js -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- password show and hide js -->
+    <script>
+      var password = document.getElementById("password");
+      var Cpassword = document.getElementById("Cpassword");
+      var hide = document.getElementById("hide");
+      var Chide = document.getElementById("Chide");
+      var show = document.getElementById("show");
+      var Cshow = document.getElementById("Cshow");
+      function toggle() {
+        if (password.type === "password") {
+          password.type = "text";
+          hide.style.display = "inline-block";
+          show.style.display = "none";
+        } else {
+          password.type = "password";
+          hide.style.display = "none";
+          show.style.display = "inline-block";
+        }
+      }
+      function Ctoggle() {
+        if (Cpassword.type === "password") {
+          Cpassword.type = "text";
+          Chide.style.display = "inline-block";
+          Cshow.style.display = "none";
+        } else {
+          Cpassword.type = "password";
+          Chide.style.display = "none";
+          Cshow.style.display = "inline-block";
+        }
+      }
+    </script>
   </body>
 </html>

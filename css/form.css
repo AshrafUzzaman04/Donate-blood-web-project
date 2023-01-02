@@ -103,13 +103,21 @@ input {
   margin: 8px;
   width: 100%;
 }
-.form-border i {
+.form-border ion-icon {
+  font-weight: 500;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(-70%, -92%);
+  right: 5%;
+  bottom: 50%;
+  transform: translate(0%, 50%);
   cursor: pointer;
   color: #818181;
+  font-size: 20px;
+}
+.form-border #hide {
+  display: none;
+}
+.form-border #Chide {
+  display: none;
 }
 div.forget {
   float: right;

@@ -50,8 +50,24 @@
             <input type="text" name="text" placeholder="ইমেইল" />
           </div>
           <div class="form-border">
-            <input type="password" name="password" placeholder="পাসওয়ার্ড" />
-            <i class="fa-solid fa-eye-slash"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="পাসওয়ার্ড"
+            />
+            <ion-icon
+              name="eye-off-outline"
+              id="show"
+              onclick="toggle()"
+            ></ion-icon>
+            <ion-icon
+              name="eye-outline"
+              id="hide"
+              onclick="toggle()"
+            ></ion-icon>
+            <!-- <i class="fa-solid fa-eye-slash"></i>
+            <i class="fa-solid fa-eye"></i> -->
           </div>
           <div class="forget">
             <a href="#">পাসওয়ার্ড </a>
@@ -100,5 +116,33 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
     ></script>
+
+    <!-- ionicons js -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- password show and hide js -->
+    <script>
+      var password = document.getElementById("password");
+      var hide = document.getElementById("hide");
+      var show = document.getElementById("show");
+      function toggle() {
+        if (password.type === "password") {
+          password.type = "text";
+          hide.style.display = "inline-block";
+          show.style.display = "none";
+        } else {
+          password.type = "password";
+          hide.style.display = "none";
+          show.style.display = "inline-block";
+        }
+      }
+    </script>
   </body>
 </html>
