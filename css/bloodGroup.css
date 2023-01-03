@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif Bengali", serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  header > .container > a {
+    color: white;
+  }
+  header > .container > a > i {
+    color: #8ae168;
+  }
+  header > .container > a > span {
+    font-size: 10px;
+  }
+  header > .container > .icon-img > a > img {
+    width: 34px;
+  }
+  header > .container > .icon-img > a > span {
+    font-size: 20px !important;
+  }
+  .body-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .body-container > .title {
+    color: rgba(255, 0, 0, 0.801);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .body-container > .title > i {
+    font-size: 24px;
+  }
+  .body-container > .title > h1 {
+    margin: 0;
+    font-weight: 500;
+    color: #da0000;
+  }
+  .body-container > .text {
+    color: darkgreen;
+    text-align: center;
+    margin: 0px 0 10px !important;
+  }
+  .body-container > .form-part {
+    width: 100%;
+  }
+  .body-container > .form-part > form > div {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "place1" "place2 " " place3" !important;
+    gap: 10px !important;
+  }
+  .body-container > .form-part > form > div > :nth-child(1) {
+    grid-area: place1;
+  }
+  .body-container > .form-part > form > div > :nth-child(2) {
+    grid-area: place2;
+  }
+  .body-container > .form-part > form > div > :nth-child(3) {
+    grid-area: place3;
+  }
+  .body-container > .form-part > form > div > select {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .body-container > .form-part > form > div > select:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgb(24, 207, 0);
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #aa3333;
+}
+header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header > .container > a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  gap: 6px;
+  transition: all 0.5s ease-in-out;
+  font-weight: 700;
+}
+header > .container > a > i {
+  color: #8ae168;
+  transition: all 0.5s ease-in-out;
+}
+header > .container > a:hover {
+  color: #8ae168;
+}
+header > .container > a:hover > i {
+  color: white;
+}
+header > .container > .icon-img {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+header > .container > .icon-img > a {
+  transition: all 0.3s ease-in-out;
+}
+header > .container > .icon-img > a > img {
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  padding: 4px;
+  transition: all 0.3s ease-in-out;
+}
+header .body-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+header .body-container > .title {
+  color: rgba(255, 0, 0, 0.801);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+header .body-container > .title > i {
+  font-size: 24px;
+}
+header .body-container > .title > h1 {
+  margin: 0;
+  font-weight: 500;
+  color: #da0000;
+}
+header .body-container > .text {
+  color: darkgreen;
+  text-align: center;
+  margin: 0px 0 16px;
+}
+header .body-container > .form-part {
+  width: 100%;
+}
+header .body-container > .form-part > form > div {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "place1 place2 place3";
+  gap: 30px;
+}
+header .body-container > .form-part > form > div > :nth-child(1) {
+  grid-area: place1;
+}
+header .body-container > .form-part > form > div > :nth-child(2) {
+  grid-area: place2;
+}
+header .body-container > .form-part > form > div > :nth-child(3) {
+  grid-area: place3;
+}
+header .body-container > .form-part > form > div > select {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+header .body-container > .form-part > form > div > select:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid rgb(24, 207, 0);
+}/*# sourceMappingURL=bloodGroup.css.map */

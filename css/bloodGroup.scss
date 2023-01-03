@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif Bengali", serif;
+}
+body {
+  background-color: #f7f7f7;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  header {
+    > .container {
+      // <!-- back to page -->
+      > a {
+        color: white;
+        > i {
+          color: #8ae168;
+        }
+        > span {
+          font-size: 10px;
+        }
+      }
+
+      // icon image
+      > .icon-img {
+        > a {
+          > img {
+            width: 34px;
+          }
+          > span {
+            font-size: 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  // body container
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    > .title {
+      color: rgba(255, 0, 0, 0.801);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      > i {
+        font-size: 24px;
+      }
+      > h1 {
+        margin: 0;
+        font-weight: 500;
+        color: #da0000;
+      }
+    }
+    > .text {
+      color: darkgreen;
+      text-align: center;
+      margin: 0px 0 10px !important;
+    }
+
+    //   form section
+    > .form-part {
+      width: 100%;
+      > form {
+        > div {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-areas: "place1" "place2 " " place3" !important;
+          gap: 10px !important;
+
+          > :nth-child(1) {
+            grid-area: place1;
+          }
+          > :nth-child(2) {
+            grid-area: place2;
+          }
+          > :nth-child(3) {
+            grid-area: place3;
+          }
+          > select {
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+              border: 1px solid rgb(24, 207, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------
+// --------------------default------------------------
+// ---------------------------------------------------
+
+// header
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #aa3333;
+
+  //   header manubar one
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    // <!-- back to page -->
+    > a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      gap: 6px;
+      transition: all 0.5s ease-in-out;
+      font-weight: 700;
+
+      > i {
+        color: #8ae168;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:hover {
+        color: #8ae168;
+        > i {
+          color: white;
+        }
+      }
+    }
+
+    // icon image
+    > .icon-img {
+      position: relative;
+      transition: all 0.5s ease-in-out;
+      > a {
+        transition: all 0.3s ease-in-out;
+        > img {
+          background-color: white;
+          border-radius: 50%;
+          margin-right: 10px;
+          padding: 4px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  // body container
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    > .title {
+      color: rgba(255, 0, 0, 0.801);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      > i {
+        font-size: 24px;
+      }
+      > h1 {
+        margin: 0;
+        font-weight: 500;
+        color: #da0000;
+      }
+    }
+    > .text {
+      color: darkgreen;
+      text-align: center;
+      margin: 0px 0 16px;
+    }
+
+    //   form section
+    > .form-part {
+      width: 100%;
+      > form {
+        > div {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-areas: "place1 place2 place3";
+          gap: 30px;
+
+          > :nth-child(1) {
+            grid-area: place1;
+          }
+          > :nth-child(2) {
+            grid-area: place2;
+          }
+          > :nth-child(3) {
+            grid-area: place3;
+          }
+          > select {
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+              border: 1px solid rgb(24, 207, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
