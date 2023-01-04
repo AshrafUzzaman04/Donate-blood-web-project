@@ -50,7 +50,7 @@ body {
     width: 150px !important;
     height: 150px !important;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     border-radius: 50%;
   }
   .body-container > .card {
@@ -139,7 +139,7 @@ header > .container > .icon-img > a > img {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   border: 1px solid rgb(0, 0, 0);
 }
@@ -179,12 +179,7 @@ header > .container > .icon-img > a > img {
   gap: 6px;
 }
 .body-container > .card > .footer > div > a > i {
-  background: linear-gradient(
-    to right,
-    #30ff21,
-    rgba(112, 181, 84, 0.8705882353),
-    #6fb554
-  );
+  background: linear-gradient(to right, #30ff21, rgba(112, 181, 84, 0.8705882353), #6fb554);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -193,4 +188,4 @@ header > .container > .icon-img > a > img {
   color: rgb(131, 131, 131);
   font-weight: 600;
   font-size: 12px;
-} /*# sourceMappingURL=donatorProfile.css.map */
+}/*# sourceMappingURL=donatorProfile.css.map */
