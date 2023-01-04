@@ -481,7 +481,8 @@ header {
         gap: 25px;
         margin: 20px 15px;
         padding: 6px 24px;
-        border: 1px solid rgb(158, 158, 158);
+        border: none;
+        box-shadow: 0 0 8px -1px rgb(158 158 158);
         border-radius: 10px;
         > div {
           > a {

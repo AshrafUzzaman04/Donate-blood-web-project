@@ -14,7 +14,9 @@ body {
 }
 @media only screen and (max-width: 767px) {
   header {
+    border: none;
     > .container {
+      border: none;
       // <!-- back to page -->
       > a {
         color: white;
@@ -42,6 +44,8 @@ body {
 
   // body container
   .body-container {
+    padding: 0 6px;
+    max-width: 500px !important;
     display: flex;
     flex-direction: column;
     > .title {
@@ -94,6 +98,49 @@ body {
               border: 1px solid rgb(24, 207, 0);
             }
           }
+        }
+      }
+    }
+  }
+
+  // every one profile
+  .profile-section {
+    padding: 0;
+    margin-top: 270px !important;
+    > .profile {
+      border-radius: 0;
+      padding: 12px 6px !important;
+      > .img {
+        margin-right: 10px;
+        > img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: none;
+          object-fit: cover;
+          text-decoration: none;
+        }
+      }
+      > .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        vertical-align: middle;
+        gap: 6px;
+        > :nth-child(1) {
+          font-weight: 700;
+          color: #636363;
+          text-decoration: none;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            color: rgb(62, 184, 62);
+          }
+        }
+        > :nth-child(2) {
+          color: #636363;
+          line-height: 18px;
         }
       }
     }
@@ -164,6 +211,8 @@ header {
 
   // body container
   .body-container {
+    padding: 0 6px;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -220,5 +269,64 @@ header {
         }
       }
     }
+  }
+}
+
+// every one profile
+.profile-section {
+  margin-top: 220px;
+  > .profile {
+    margin: 8px 0;
+    max-width: 700px;
+    border-top: 3px solid rgb(206, 206, 206);
+    border-bottom: 3px solid rgb(206, 206, 206);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 12px;
+    > .img {
+      margin-right: 10px;
+      > img {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        border: none;
+        object-fit: cover;
+        text-decoration: none;
+      }
+    }
+    > .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      vertical-align: middle;
+      gap: 6px;
+      > :nth-child(1) {
+        font-weight: 700;
+        color: #636363;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          color: rgb(62, 184, 62);
+        }
+      }
+      > :nth-child(2) {
+        color: #636363;
+        line-height: 18px;
+      }
+    }
+  }
+
+  // When there is no blood donor at this location
+  > .empty {
+    height: calc(100vh - 270px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

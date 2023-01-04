@@ -14,6 +14,12 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  header {
+    border: none;
+  }
+  header > .container {
+    border: none;
+  }
   header > .container > a {
     color: white;
   }
@@ -30,6 +36,8 @@ body {
     font-size: 20px !important;
   }
   .body-container {
+    padding: 0 6px;
+    max-width: 500px !important;
     display: flex;
     flex-direction: column;
   }
@@ -80,6 +88,47 @@ body {
     outline: none;
     box-shadow: none;
     border: 1px solid rgb(24, 207, 0);
+  }
+  .profile-section {
+    padding: 0;
+    margin-top: 270px !important;
+  }
+  .profile-section > .profile {
+    border-radius: 0;
+    padding: 12px 6px !important;
+  }
+  .profile-section > .profile > .img {
+    margin-right: 10px;
+  }
+  .profile-section > .profile > .img > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    -o-object-fit: cover;
+       object-fit: cover;
+    text-decoration: none;
+  }
+  .profile-section > .profile > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    vertical-align: middle;
+    gap: 6px;
+  }
+  .profile-section > .profile > .text > :nth-child(1) {
+    font-weight: 700;
+    color: #636363;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+  .profile-section > .profile > .text > :nth-child(1):hover {
+    color: rgb(62, 184, 62);
+  }
+  .profile-section > .profile > .text > :nth-child(2) {
+    color: #636363;
+    line-height: 18px;
   }
 }
 header {
@@ -133,6 +182,8 @@ header > .container > .icon-img > a > img {
   transition: all 0.3s ease-in-out;
 }
 header .body-container {
+  padding: 0 6px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
@@ -184,4 +235,60 @@ header .body-container > .form-part > form > div > select:focus {
   outline: none;
   box-shadow: none;
   border: 1px solid rgb(24, 207, 0);
+}
+
+.profile-section {
+  margin-top: 220px;
+}
+.profile-section > .profile {
+  margin: 8px 0;
+  max-width: 700px;
+  border-top: 3px solid rgb(206, 206, 206);
+  border-bottom: 3px solid rgb(206, 206, 206);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 12px;
+}
+.profile-section > .profile > .img {
+  margin-right: 10px;
+}
+.profile-section > .profile > .img > img {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  border: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-decoration: none;
+}
+.profile-section > .profile > .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  vertical-align: middle;
+  gap: 6px;
+}
+.profile-section > .profile > .text > :nth-child(1) {
+  font-weight: 700;
+  color: #636363;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+.profile-section > .profile > .text > :nth-child(1):hover {
+  color: rgb(62, 184, 62);
+}
+.profile-section > .profile > .text > :nth-child(2) {
+  color: #636363;
+  line-height: 18px;
+}
+.profile-section > .empty {
+  height: calc(100vh - 270px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=bloodGroup.css.map */
