@@ -35,7 +35,8 @@
                 <div class="form-border">
                     <input type="password" id="password" name="password" placeholder="পাসওয়ার্ড" />
                     <ion-icon name="eye-off-outline" id="show" onclick="toggle()"></ion-icon>
-                    <ion-icon name="eye-outline" id="hide" onclick="toggle()"></ion-icon>
+                    <ion-icon name="eye-outline" id="hide" onclick="toggle()">
+                    </ion-icon>
                 </div>
                 <div class="forget">
                     <a href="#">পাসওয়ার্ড </a>

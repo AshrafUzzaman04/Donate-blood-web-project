@@ -22,6 +22,8 @@ if(isset($_POST['submit123'])){
         $errorNum = "আপনার মোবাইল নম্বরটি লিখুন!";
     }elseif(!filter_var($number, FILTER_SANITIZE_NUMBER_INT)){
         $errorNum = "দয়া করে সঠিক নম্বরটি প্রদান করুন";
+    }elseif(!preg_match('/^[0-9]{11}+$/', $number)){
+        $errorNum = "দয়া করে সঠিক নম্বরটি প্রদান করুন";
     }else{
         $correctNum = $number;
     }
@@ -32,7 +34,15 @@ if(isset($_POST['submit123'])){
     }elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $errorEmail = "অনুগ্রহ করে সঠিক ইমেইলটি প্রদান করুন!";
     }else{
-        $correctEmail = $email;
+        $select_pre_email_query = "SELECT * FROM `sign_up` WHERE `email` = '$email'";
+        $select_pre_email = $connect->query($select_pre_email_query);
+
+        if($select_pre_email->num_rows > 0){
+            $errorEmail = "এই ইমেইল দ্বারা পূর্বে রেজিস্ট্রেশন করা হয়েছে!";
+        }else{
+            $correctEmail = $email;
+        }
+
     }
 
     // password validation
@@ -42,7 +52,10 @@ if(isset($_POST['submit123'])){
         $errorPass = "আপনার পাসওয়ার্ডে কমপক্ষে ৮টি অক্ষর থাকতে হবে!";
     }elseif(!preg_match("#[0-9]+#",$password)){
         $errorPass =  "আপনার পাসওয়ার্ডে কমপক্ষে ১টি নম্বর থাকতে হবে!";
-    }else{
+    }elseif(!preg_match('@[a-z]@', $password)){
+        $errorPass = "আপনার পাসওয়ার্ডে কমপক্ষে ১টি ইংরেজী বর্ণমালা থাকতে হবে!";
+    }
+    else{
         $correctPass = $password;
     }
 
@@ -58,14 +71,18 @@ if(isset($_POST['submit123'])){
 
 
 
-    if(!empty($correctName) && !empty($correctNum) && !empty($correctEmail) && !empty($correctPass) && !empty($correctCpass)){
-        $insert_query = "INSERT INTO `sign_up`(`name`, `number`, `email`, `password`) VALUES ('$correctName','$correctNum','$correctEmail','correctCpass')";
+    if(!empty($correctName) && !empty($correctNum) && !empty($correctEmail) && !empty($correctCpass)){
+        $insert_query = "INSERT INTO `sign_up`(`name`, `number`, `email`, `password`) VALUES ('$correctName','$correctNum','$correctEmail','$correctCpass')";
         $insert = $connect->query($insert_query);
 
-        // $correctName = $correctNum = $correctEmail = $correctPass = $correctCpass = "";
+        
 
         if($insert){
-            // echo"<script>alert('hellow world');swal('Good job!', 'You clicked the button!', 'success')</script>";
+            echo"<script>swal('Good job!', 'You clicked the button!', 'success')
+            console.log('swal');
+            </script>";
+
+            $name = $number = $email = $password = $Cpassword = null;
         }
 
         
