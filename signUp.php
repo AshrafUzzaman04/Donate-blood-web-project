@@ -1,6 +1,6 @@
 <?php
 
-$connect = mysqli_connect("localhost", "root", "" , "blood_donate");
+include_once("./databaseInput.php");
 
 if(isset($_POST['submit123'])){
     $name = $_POST['name'];
@@ -54,8 +54,7 @@ if(isset($_POST['submit123'])){
         $errorPass =  "আপনার পাসওয়ার্ডে কমপক্ষে ১টি নম্বর থাকতে হবে!";
     }elseif(!preg_match('@[a-z]@', $password)){
         $errorPass = "আপনার পাসওয়ার্ডে কমপক্ষে ১টি ইংরেজী বর্ণমালা থাকতে হবে!";
-    }
-    else{
+    }else{
         $correctPass = $password;
     }
 
@@ -63,7 +62,7 @@ if(isset($_POST['submit123'])){
     // confirm password
     if(empty($Cpassword)){
         $errorCpass = "পাসওয়ার্ডটি পূনরায় লিখুন";
-    }elseif(!($correctPass === $Cpassword)){
+    }elseif(!($password === $Cpassword)){
         $errorCpass = "পাসওয়ার্ডটি একই হতে হবে!";
     }else{
         $correctCpass = $Cpassword;
@@ -71,18 +70,26 @@ if(isset($_POST['submit123'])){
 
 
 
-    if(!empty($correctName) && !empty($correctNum) && !empty($correctEmail) && !empty($correctCpass)){
+    if(!empty($correctName) && !empty($correctNum) && !empty($correctEmail) && !empty($correctPass) && !empty($correctCpass)){
         $insert_query = "INSERT INTO `sign_up`(`name`, `number`, `email`, `password`) VALUES ('$correctName','$correctNum','$correctEmail','$correctCpass')";
         $insert = $connect->query($insert_query);
 
-        
-
+    
         if($insert){
-            echo"<script>swal('Good job!', 'You clicked the button!', 'success')
-            console.log('swal');
-            </script>";
 
             $name = $number = $email = $password = $Cpassword = null;
+
+            
+            // sweet alert status
+            $_SESSION['status'] = "রেজিস্ট্রেশন সম্পন্ন হয়েছে!";
+            $_SESSION['status_code'] = "success";
+
+
+            $_SESSION['sign_up'] = ["name"=>$correctName, "number"=>$correctNum, "email"=>$correctEmail, "password" => $correctCpass];
+        }else{
+            // sweet alert status
+            $_SESSION['status'] = "দুঃখিত! আপনার রেজিস্ট্রেশনটি সম্পন্ন হয়নি।";
+            $_SESSION['status_code'] = "error";
         }
 
         
@@ -120,7 +127,7 @@ if(isset($_POST['submit123'])){
             </div>
 
             <!-- form pannel -->
-            <form class="middelDiv" method="POST">
+            <form class="middelDiv" method="POST" action="signUp.php">
                 <div class="form-border">
                     <input type="text" name="name" placeholder="নাম" value="<?= $name ?? null ?>" />
                 </div>
@@ -187,8 +194,28 @@ if(isset($_POST['submit123'])){
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <!-- sweet alert js -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script src="./js/sweetAlert.js"></script>
+        <?php 
+if(isset($_SESSION['sign_up']) && $_SESSION['sign_up'] != ''){
+?>
+<script type="text/javascript">
+       swal({
+        title: "<?= $_SESSION['status'] ?>",
+        //   text: "You clicked the button!",
+        icon: "<?= $_SESSION['status_code']  ?>",
+        buttons: {
+        confirm : {text:'ঠিক আছে!',className:'bg-success'},
+    },
+        }).then(function() {
+    window.location = "./";
+});;         
+</script>
+<?php
+unset($_SESSION['status']);
+}
+?>
+        
+ 
 
     <!-- password show and hide js -->
     <script>

@@ -1,3 +1,8 @@
+<?php 
+include_once("./databaseInput.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
