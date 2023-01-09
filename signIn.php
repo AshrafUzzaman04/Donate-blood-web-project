@@ -1,5 +1,30 @@
 <?php 
 include_once("./databaseInput.php");
+
+
+if(isset($_POST[''])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // email validation
+    if(empty($email)){
+        $errorEmail = "আপনার ইমেইলটি প্রদান করুন!";
+    }else{
+        $correctEmail = $email;
+    }
+
+    // password validation from database
+    if(empty($password)){
+        $errorPassword = "পাসওয়ার্ড খালি থাকা যাবে না!";
+    }else{
+        $correctPass = $password;
+    }
+
+
+    if(isset($correctEmail) && isset($correctPass)){
+        
+    }
+}
 ?>
 
 
@@ -35,7 +60,7 @@ include_once("./databaseInput.php");
             <!-- form pannel -->
             <div class="middelDiv">
                 <div class="form-border">
-                    <input type="text" name="text" placeholder="ইমেইল" />
+                    <input type="text" name="email" placeholder="ইমেইল" />
                 </div>
                 <div class="form-border">
                     <input type="password" id="password" name="password" placeholder="পাসওয়ার্ড" />
