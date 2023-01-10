@@ -1,4 +1,6 @@
-<?php 
+<!-- when use ajax sweet alert -->
+
+<?php
 $connect = mysqli_connect("localhost", "root", "" , "blood_donate");
 
 if(isset($_POST['username'])){

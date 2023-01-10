@@ -78,7 +78,6 @@ if(isset($_POST['submit123'])){
         if($insert){
 
             $name = $number = $email = $password = $Cpassword = null;
-
             
             // sweet alert status
             $_SESSION['status'] = "রেজিস্ট্রেশন সম্পন্ন হয়েছে!";
@@ -86,6 +85,7 @@ if(isset($_POST['submit123'])){
 
 
             $_SESSION['sign_up'] = ["name"=>$correctName, "number"=>$correctNum, "email"=>$correctEmail, "password" => $correctCpass];
+
         }else{
             // sweet alert status
             $_SESSION['status'] = "দুঃখিত! আপনার রেজিস্ট্রেশনটি সম্পন্ন হয়নি।";

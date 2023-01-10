@@ -2,7 +2,7 @@
 include_once("./databaseInput.php");
 
 
-if(isset($_POST[''])){
+if(isset($_POST['signIn123'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -10,20 +10,44 @@ if(isset($_POST[''])){
     if(empty($email)){
         $errorEmail = "আপনার ইমেইলটি প্রদান করুন!";
     }else{
-        $correctEmail = $email;
+        $check_user_query_pass = "SELECT * FROM `sign_up` WHERE `email` = '$email'";
+        $check_user = $connect->query($check_user_query_pass);
+
+        if($check_user->num_rows !== 1){
+            $errorEmail = "সঠিক ইমেইলটি প্রদান করুন!";
+        }else{
+            $correctEmail = $email;
+        }
+
     }
 
     // password validation from database
     if(empty($password)){
         $errorPassword = "পাসওয়ার্ড খালি থাকা যাবে না!";
     }else{
-        $correctPass = $password;
+        $check_user_query_email = "SELECT * FROM `sign_up` WHERE `password` = '$password'";
+        $check_user = $connect->query($check_user_query_email);
+
+        if($check_user->num_rows !== 1){
+            $errorPassword = "পাসওয়ার্ডটি সঠিক নয়!";
+        }else{
+            $correctPass = $password;
+        }
+
+
     }
 
 
     if(isset($correctEmail) && isset($correctPass)){
-        
+       
+        $_SESSION['status'] = "অভিনন্দন! লগইন সম্পন্ন হয়েছে।";
+        $_SESSION['status_code'] = "success";
+
+        $email = $password = "";
+
+   
     }
+    
 }
 ?>
 
@@ -58,22 +82,30 @@ if(isset($_POST[''])){
             </div>
 
             <!-- form pannel -->
-            <div class="middelDiv">
+            <form class="middelDiv" method="POST">
+                <!-- email -->
                 <div class="form-border">
-                    <input type="text" name="email" placeholder="ইমেইল" />
+                    <input type="text" name="email" placeholder="ইমেইল" value="<?= $email ?? null ?>"/>
                 </div>
+                <div style="text-align: center;">
+                    <span style="font-size: 12px; color:red;"><?= $errorEmail ?? null ?></span>
+                </div>
+                <!-- password -->
                 <div class="form-border">
-                    <input type="password" id="password" name="password" placeholder="পাসওয়ার্ড" />
+                    <input type="password" id="password" name="password" placeholder="পাসওয়ার্ড" value="<?= $password ?? null ?>" />
                     <ion-icon name="eye-off-outline" id="show" onclick="toggle()"></ion-icon>
                     <ion-icon name="eye-outline" id="hide" onclick="toggle()">
                     </ion-icon>
+                </div>
+                <div style="text-align: center;">
+                    <span style="font-size: 12px; color:red;"><?= $errorPassword ?? null ?></span>
                 </div>
                 <div class="forget">
                     <a href="#">পাসওয়ার্ড </a>
                     <span> ভুলে গেছেন?</span>
                 </div>
-                <input class="submit" type="submit" name="submit" value="সাইন ইন" />
-            </div>
+                <input class="submit" type="submit" name="signIn123" value="সাইন ইন" />
+            </form>
 
             <!-- form footer -->
             <div class="footer">
@@ -107,6 +139,28 @@ if(isset($_POST[''])){
     <!-- ionicons js -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- sweet alert js -->
+    <script src="./js/sweetAlert.js"></script>
+     <?php 
+if(isset($_SESSION['status']) && $_SESSION['status'] != ''){
+?>
+<script type="text/javascript">
+       swal({
+        title: "<?= $_SESSION['status'] ?>",
+        //   text: "You clicked the button!",
+        icon: "<?= $_SESSION['status_code']  ?>",
+        buttons: {
+        confirm : {text:'ঠিক আছে!',className:'bg-success'},
+    },
+        }).then(function() {
+    window.location = "./";
+});;         
+</script>
+<?php
+unset($_SESSION['status']);
+}
+?>
 
     <!-- password show and hide js -->
     <script>
