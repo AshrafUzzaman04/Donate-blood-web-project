@@ -2,7 +2,6 @@
 include_once("./databaseInput.php");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +47,7 @@ include_once("./databaseInput.php");
 
                 <div class="manubar">
                     <!-- sign in button -->
+                    <?php if(!isset($_SESSION['register'])){ ?>
                     <div class="signIn-btn">
                         <a href="signIn.php">
                             <ion-icon name="log-in-outline" style="font-size: 24px; font-weight: 800"></ion-icon>
@@ -55,6 +55,21 @@ include_once("./databaseInput.php");
                             সাইন ইন
                         </a>
                     </div>
+                    <?php
+                     } else{
+                    ?>
+
+                    <div id="pp-img" style="padding: 4px 10px !important;">
+                        <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                            <img src="./images/blank_men.png" alt="" width="36px" height="36px" style="border-radius: 50%;">
+                        </a>
+                        
+                    </div>
+
+
+                    <?php }
+                    ?>
 
                     <!-- manubar icon -->
                     <div class="mobile-navbar d-flex justify-content-center align-items-center text-white"
@@ -89,11 +104,25 @@ include_once("./databaseInput.php");
                             <div class="offcanvas-body">
                                 <!-- profile section -->
                                 <div class="profile-section">
+
+                                <?php if(!isset($_SESSION['register'])){ ?>
                                     <div class="img-div">
-                                        <img src="./images/myPic (6).jpeg" alt="" />
+                                        <img src="./images/blank_men.png" alt="" />
                                     </div>
+
+                                <?php
+                                    }else{
+                                ?>
+                                    <div class="img-div">
+                                        <img src="./images/blank_men.png" alt="" />
+                                    </div>
+
+                                <?php
+                                    }
+                                ?>
+
                                     <div class="top-information" style="display: flex; flex-direction: column">
-                                        <span>নাম</span>
+                                        <span>Name</span>
                                         <span>example@gmail.com</span>
                                     </div>
                                 </div>
@@ -104,7 +133,7 @@ include_once("./databaseInput.php");
                                         <li>
                                             <a href="javascript:void(0)">
                                                 <ion-icon name="call-outline"></ion-icon>
-                                                +৮৮০১৭৪৯৯৩১৮৯১
+                                                +৮৮০১২৩৪৫৬৭৮৯৯
                                             </a>
                                         </li>
                                         <li>
@@ -122,7 +151,7 @@ include_once("./databaseInput.php");
                                         <li>
                                             <a href="javascript:void(0)">
                                                 <ion-icon name="fitness-outline"></ion-icon> মোট রক্ত
-                                                দান করেছেনঃ ১বার
+                                                দান করেছেনঃ 
                                             </a>
                                         </li>
                                         <li>

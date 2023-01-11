@@ -1,54 +1,6 @@
-<?php 
-include_once("./databaseInput.php");
-
-
-if(isset($_POST['signIn123'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    // email validation
-    if(empty($email)){
-        $errorEmail = "আপনার ইমেইলটি প্রদান করুন!";
-    }else{
-        $check_user_query_pass = "SELECT * FROM `sign_up` WHERE `email` = '$email'";
-        $check_user = $connect->query($check_user_query_pass);
-
-        if($check_user->num_rows !== 1){
-            $errorEmail = "সঠিক ইমেইলটি প্রদান করুন!";
-        }else{
-            $correctEmail = $email;
-        }
-
-    }
-
-    // password validation from database
-    if(empty($password)){
-        $errorPassword = "পাসওয়ার্ড খালি থাকা যাবে না!";
-    }else{
-        $check_user_query_email = "SELECT * FROM `sign_up` WHERE `password` = '$password'";
-        $check_user = $connect->query($check_user_query_email);
-
-        if($check_user->num_rows !== 1){
-            $errorPassword = "পাসওয়ার্ডটি সঠিক নয়!";
-        }else{
-            $correctPass = $password;
-        }
-
-
-    }
-
-
-    if(isset($correctEmail) && isset($correctPass)){
-       
-        $_SESSION['status'] = "অভিনন্দন! লগইন সম্পন্ন হয়েছে।";
-        $_SESSION['status_code'] = "success";
-
-        $email = $password = "";
-
-   
-    }
-    
-}
+<?php
+include_once("./registerCoding.php");
+isset($_SESSION['register']) && header("location: ./");
 ?>
 
 
