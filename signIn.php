@@ -1,5 +1,6 @@
 <?php
-include_once("./registerCoding.php");
+include_once("databaseInput.php");
+include_once("registerCoding.php");
 isset($_SESSION['register']) && header("location: ./");
 ?>
 
@@ -94,10 +95,12 @@ isset($_SESSION['register']) && header("location: ./");
 
     <!-- sweet alert js -->
     <script src="./js/sweetAlert.js"></script>
+
+    
      <?php 
 if(isset($_SESSION['status']) && $_SESSION['status'] != ''){
 ?>
-<script type="text/javascript">
+<script>
        swal({
         title: "<?= $_SESSION['status'] ?>",
         //   text: "You clicked the button!",
@@ -107,12 +110,13 @@ if(isset($_SESSION['status']) && $_SESSION['status'] != ''){
     },
         }).then(function() {
     window.location = "./";
-});;         
-</script>
+});    
+</script>  
 <?php
 unset($_SESSION['status']);
 }
 ?>
+
 
     <!-- password show and hide js -->
     <script>

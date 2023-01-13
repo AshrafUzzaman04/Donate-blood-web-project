@@ -122,8 +122,8 @@ include_once("./databaseInput.php");
                                 ?>
 
                                     <div class="top-information" style="display: flex; flex-direction: column">
-                                        <span>Name</span>
-                                        <span>example@gmail.com</span>
+                                        <span><?= $_SESSION['register']['name'] ?? "Name" ?></span>
+                                        <span><?= $_SESSION['register']['email'] ?? "example@gmail.com" ?></span>
                                     </div>
                                 </div>
 
@@ -133,7 +133,7 @@ include_once("./databaseInput.php");
                                         <li>
                                             <a href="javascript:void(0)">
                                                 <ion-icon name="call-outline"></ion-icon>
-                                                +৮৮০১২৩৪৫৬৭৮৯৯
+                                               +880<?= $_SESSION['register']['number'] ?? "1234567899" ?>
                                             </a>
                                         </li>
                                         <li>
@@ -167,13 +167,13 @@ include_once("./databaseInput.php");
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="logOut.php">
                                                 <ion-icon name="log-out-outline"></ion-icon> লগ
                                                 আউট
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhuebris.com%2Ffacebook-share-button&t=How+to+Share+Content+from+Your+Website+on+Facebook">
                                                 <ion-icon name="share-social-outline"></ion-icon>
                                                 শেয়ার করুন
                                             </a>

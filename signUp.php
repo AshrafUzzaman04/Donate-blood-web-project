@@ -1,10 +1,8 @@
 <?php
-include_once("./databaseInput.php");
-
+include_once("databaseInput.php");
+include_once("registerCoding.php");
 isset($_SESSION['register']) && header("location: ./");
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +18,8 @@ isset($_SESSION['register']) && header("location: ./");
 
     <!-- fontawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
     <div id="particles-js">
@@ -100,25 +100,33 @@ isset($_SESSION['register']) && header("location: ./");
 
     <!-- sweet alert js -->
     <script src="./js/sweetAlert.js"></script>
+
+    <!-- otp  -->
+    <script src="./js/varificationOTP.js"></script>
+
+    <script>
         <?php 
-if(isset($_SESSION['register']) && $_SESSION['register'] != ''){
+
+if(isset($_SESSION['status']) && $_SESSION['status'] != ''){
 ?>
-<script type="text/javascript">
+
        swal({
         title: "<?= $_SESSION['status'] ?>",
         //   text: "You clicked the button!",
-        icon: "<?= $_SESSION['status_code']  ?>",
+        icon: "<?= $_SESSION['status_code'] ?>",
         buttons: {
         confirm : {text:'ঠিক আছে!',className:'bg-success'},
     },
         }).then(function() {
     window.location = "./";
-});;         
-</script>
+});         
+
 <?php
 unset($_SESSION['status']);
 }
 ?>
+
+</script>
         
 
     <!-- password show and hide js -->

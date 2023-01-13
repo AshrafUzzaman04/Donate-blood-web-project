@@ -1,6 +1,36 @@
 <?php 
 include_once("./databaseInput.php");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+use function PHPSTORM_META\exitPoint;
+
+function mailSender($mailTo, $mailBody){
+
+require 'vendor/autoload.php';
+$mail = new PHPMailer(true);
+try {
+   //$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'ashraf.uzzaman04082004@gmail.com';
+    $mail->Password   = 'zkumgoppveqwmcka';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
+    $mail->addCustomHeader('Content-Type', 'text/html;charset=utf-8');
+    $mail->setFrom('ashraf.uzzaman04082004@gmail.com');
+    $mail->addAddress($mailTo);
+    $mail->Subject = 'Test Mail';
+    $mail->Body    = $mailBody;
+    $mail->send();
+//  echo '1';
+} catch (Exception $e) {
+// echo '0'; 
+}
+};
 
 // signup validation
 
@@ -73,6 +103,9 @@ if(isset($_POST['submit123'])){
 
 
     if(!empty($correctName) && !empty($correctNum) && !empty($correctEmail) && !empty($correctPass) && !empty($correctCpass)){
+
+        $_SESSION['register'] = $_post;
+
         $insert_query = "INSERT INTO `sign_up`(`name`, `number`, `email`, `password`) VALUES ('$correctName','$correctNum','$correctEmail','$correctCpass')";
         $insert = $connect->query($insert_query);
 
@@ -92,12 +125,8 @@ if(isset($_POST['submit123'])){
             // sweet alert status
             $_SESSION['status'] = "দুঃখিত! আপনার রেজিস্ট্রেশনটি সম্পন্ন হয়নি।";
             $_SESSION['status_code'] = "error";
-        }
-
-        
+        }   
     }
-
-
 }
 
 
@@ -145,7 +174,7 @@ if(isset($_POST['signIn123'])){
         $img = $userInfo->img;
 
         $_SESSION['register'] = ["name" => $name, "number" => $number, "email"=> $email, "role"=> $role, "img" => $img];
-       
+
         $_SESSION['status'] = "অভিনন্দন! লগইন সম্পন্ন হয়েছে।";
         $_SESSION['status_code'] = "success";
 

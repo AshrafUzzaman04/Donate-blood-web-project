@@ -1,11 +1,3 @@
-<?php 
-$previous = "javascript:history.go(-1)";
-if(isset($_SERVER['HTTP_REFERER'])) {
-    $previous = $_SERVER['HTTP_REFERER'];
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +33,7 @@ if(isset($_SERVER['HTTP_REFERER'])) {
                         রক্ত দান</span></a>
             </div>
             <!-- back to page -->
-            <a class="back-to-page" href="<?= $previous ?>">
+            <a class="back-to-page" href="./bloodSearch.php">
                 <i class="fa-solid fa-circle-arrow-left"></i>
                 <span>পূর্বের পেইজে ফিরুন</span>
             </a>
