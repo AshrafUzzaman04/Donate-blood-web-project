@@ -1,3 +1,7 @@
+<?php 
+include_once("./databaseInput.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,13 +47,26 @@
 
             <div class="manubar">
                 <!-- sign in button -->
+                <?php if(!isset($_SESSION['register'])){ ?>
                 <div class="signIn-btn">
-                    <a href="/signIn.html">
+                    <a href="signIn.php">
                         <ion-icon name="log-in-outline" style="font-size: 24px; font-weight: 800"></ion-icon>
 
                         সাইন ইন
                     </a>
                 </div>
+                <?php
+                     } else{
+                    ?>
+
+                <div id="pp-img" style="padding: 4px 10px !important;">
+                    <a href="profileUpdate.php">
+                        <img src="./images/blank_men.png" alt="" width="36px" height="36px" style="border-radius: 50%;">
+                    </a>
+
+                </div>
+                <?php }
+                    ?>
 
                 <!-- manubar icon -->
                 <div class="mobile-navbar d-flex justify-content-center align-items-center text-white" type="button"
@@ -84,12 +101,26 @@
                         <div class="offcanvas-body">
                             <!-- profile section -->
                             <div class="profile-section">
+
+                                <?php if(!isset($_SESSION['register'])){ ?>
                                 <div class="img-div">
-                                    <img src="./images/myPic (6).jpeg" alt="" />
+                                    <img src="./images/blank_men.png" alt="" />
                                 </div>
-                                <div class="top-information">
-                                    <span>আশরাফ উজ্জামান</span>
-                                    <span>ashraf.uzzaman04082004@gmail.com</span>
+
+                                <?php
+                                    }else{
+                                ?>
+                                <div class="img-div">
+                                    <img src="./images/blank_men.png" alt="" />
+                                </div>
+
+                                <?php
+                                    }
+                                ?>
+
+                                <div class="top-information" style="display: flex; flex-direction: column">
+                                    <span><?= $_SESSION['register']['name'] ?? "Name" ?></span>
+                                    <span><?= $_SESSION['register']['email'] ?? "example@gmail.com" ?></span>
                                 </div>
                             </div>
 
@@ -99,7 +130,7 @@
                                     <li>
                                         <a href="javascript:void(0)">
                                             <ion-icon name="call-outline"></ion-icon>
-                                            +৮৮০১৭৪৯৯৩১৮৯১
+                                            +880<?= $_SESSION['register']['number'] ?? "................." ?>
                                         </a>
                                     </li>
                                     <li>
@@ -127,7 +158,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
+                                        <a href="profileUpdate.php">
                                             <ion-icon name="cloud-upload-outline"></ion-icon>
                                             প্রফাইল আপডেট করুন
                                         </a>

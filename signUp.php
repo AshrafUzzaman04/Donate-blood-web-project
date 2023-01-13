@@ -1,6 +1,6 @@
 <?php
 include_once("databaseInput.php");
-include_once("registerCoding.php");
+include_once("code.php");
 isset($_SESSION['register']) && header("location: ./");
 ?>
 

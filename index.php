@@ -60,11 +60,11 @@ include_once("./databaseInput.php");
                     ?>
 
                     <div id="pp-img" style="padding: 4px 10px !important;">
-                        <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                        aria-controls="offcanvasExample">
-                            <img src="./images/blank_men.png" alt="" width="36px" height="36px" style="border-radius: 50%;">
+                        <a href="profileUpdate.php">
+                            <img src="./images/blank_men.png" alt="" width="36px" height="36px"
+                                style="border-radius: 50%;">
                         </a>
-                        
+
                     </div>
 
 
@@ -105,19 +105,19 @@ include_once("./databaseInput.php");
                                 <!-- profile section -->
                                 <div class="profile-section">
 
-                                <?php if(!isset($_SESSION['register'])){ ?>
+                                    <?php if(!isset($_SESSION['register'])){ ?>
                                     <div class="img-div">
                                         <img src="./images/blank_men.png" alt="" />
                                     </div>
 
-                                <?php
+                                    <?php
                                     }else{
                                 ?>
                                     <div class="img-div">
                                         <img src="./images/blank_men.png" alt="" />
                                     </div>
 
-                                <?php
+                                    <?php
                                     }
                                 ?>
 
@@ -133,7 +133,7 @@ include_once("./databaseInput.php");
                                         <li>
                                             <a href="javascript:void(0)">
                                                 <ion-icon name="call-outline"></ion-icon>
-                                               +880<?= $_SESSION['register']['number'] ?? "1234567899" ?>
+                                                +880<?= $_SESSION['register']['number'] ?? "................." ?>
                                             </a>
                                         </li>
                                         <li>
@@ -151,7 +151,7 @@ include_once("./databaseInput.php");
                                         <li>
                                             <a href="javascript:void(0)">
                                                 <ion-icon name="fitness-outline"></ion-icon> মোট রক্ত
-                                                দান করেছেনঃ 
+                                                দান করেছেনঃ
                                             </a>
                                         </li>
                                         <li>
@@ -161,7 +161,7 @@ include_once("./databaseInput.php");
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="./profileUpdate.php">
                                                 <ion-icon name="cloud-upload-outline"></ion-icon>
                                                 প্রফাইল আপডেট করুন
                                             </a>
@@ -173,7 +173,8 @@ include_once("./databaseInput.php");
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhuebris.com%2Ffacebook-share-button&t=How+to+Share+Content+from+Your+Website+on+Facebook">
+                                            <a
+                                                href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fhuebris.com%2Ffacebook-share-button&t=How+to+Share+Content+from+Your+Website+on+Facebook">
                                                 <ion-icon name="share-social-outline"></ion-icon>
                                                 শেয়ার করুন
                                             </a>
@@ -371,7 +372,8 @@ include_once("./databaseInput.php");
                         স্বেচ্ছাসেবক সুযোগের মধ্যে রয়েছে রক্তদানে সহায়তা করা এবং আপনার
                         সম্প্রদায়কে অত্যন্ত প্রয়োজনীয় পরিষেবা প্রদান করা।
                     </p>
-                    <a href="javascript:void(0)">
+                    <a href="https://www.manobkantha.com.bd/opinion/414511/%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A7%87%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%BE%E0%A7%9F-%E0%A6%B0%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%A6%E0%A6%BE%E0%A6%A8-%E0%A6%AE%E0%A6%BE%E0%A6%A8%E0%A6%AC%E0%A6%BF%E0%A6%95%E0%A6%A4%E0%A6%BE-%E0%A6%93-%E0%A6%A6%E0%A6%BE%E0%A7%9F%E0%A6%AC%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A6%A4%E0%A6%BE"
+                        target="_blank">
                         <button class="btn">আরো জানুন</button>
                     </a>
                 </div>

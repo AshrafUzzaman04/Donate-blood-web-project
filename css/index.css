@@ -631,6 +631,7 @@ footer > section > .container-lg > div > :nth-child(3) > .subscribe > form {
   display: flex;
 }
 footer > section > .container-lg > div > :nth-child(3) > .subscribe > form > .email {
+  width: 175px;
   padding: 10px 0;
   padding-left: 8px;
   border: none;

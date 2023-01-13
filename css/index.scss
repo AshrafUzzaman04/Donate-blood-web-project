@@ -237,6 +237,86 @@ body {
       }
     }
   }
+
+  // footer
+  footer {
+  > section {
+    > .container-lg {
+      padding: 14px !important;
+      > div {
+        display: flex;
+        flex-direction: row;
+        > div {
+          color: white;
+        }
+        > :nth-child(3) {
+          > .subscribe {
+            > form {
+              display: flex;
+              > .email {
+                width: 177px;
+                padding: 10px 0;
+                padding-left: 8px;
+                border: none;
+                border-radius: 8px 0 0 8px;
+                &:focus {
+                  outline: 0;
+                }
+                &::placeholder {
+                  color: rgb(214, 214, 214);
+                }
+              }
+              > .submit {
+                background: linear-gradient(
+                  to right,
+                  #67a74e,
+                  #8ecf42,
+                  #67a74e
+                );
+                font-weight: 500;
+                border: none;
+                border-radius: 0 8px 8px 0;
+                padding: 10px;
+                vertical-align: middle;
+                text-align: center;
+                color: white;
+                font-size: 17px;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                  background: linear-gradient(#6fb554, #1fbf15);
+                }
+              }
+            }
+          }
+          > .list-item {
+            margin: 15px 0;
+            > ul {
+              display: flex;
+              padding: 0;
+              gap: 25px;
+              justify-content: start;
+              > li {
+                list-style: none;
+                > a {
+                  text-decoration: none;
+                  color: rgba(255, 255, 255, 0.836);
+                  font-weight: 300;
+                  font-size: 17px;
+                  transition: all 0.3s ease-in-out;
+
+                  &:hover {
+                    text-decoration: underline;
+                    color: #2bff00;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // ===============================
